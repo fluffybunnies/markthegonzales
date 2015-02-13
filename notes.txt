@@ -1,0 +1,22 @@
+
+--- To Do ---
+
+- migrate all old sites to new server
+	- ace  alechulce  arrrr  guitar  hope
+	- make sure ace/demo works
+- install wordpress to mark
+	- consider using version and install sql from fabfitfun
+	- use separate db name (markthegonzales)
+- move current ace to mark
+- add google analytics to deploy script
+- add logrotate.sh to sire/_common/_bin
+	- pass it $installDir so it can check $installDir/post_log_rotate.sh
+		- in the for loop, check if arg.indexOf('installDir=') == 0
+	- rotate nginx (and other) logs on sire/mark deploy script
+	- see if other logs in other repos on same server need rotating
+- disable theme (and other) updates from admin
+	- see what i did with fff
+- add relevant instructions from hope's notes.txt to this file
+- automatically resize images on upload so we dont run out of space
+	- maybe do this with node cron since php image resize sucks
+	- make sure they get uploaded to s3
