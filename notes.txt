@@ -1,4 +1,14 @@
 
+-- Initial Installation --
+
+- run /wp-admin/install.php
+	- set temp user
+- backup db
+- create new admin user with strong credentials
+- delete temp_user
+
+
+
 --- To Do ---
 
 52.1.131.33
