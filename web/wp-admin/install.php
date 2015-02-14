@@ -30,6 +30,7 @@ if ( false ) {
  * @since 1.5.1
  * @var bool
  */
+exit('1');
 define( 'WP_INSTALLING', true );
 
 /** Load WordPress Bootstrap */
