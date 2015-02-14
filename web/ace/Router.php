@@ -6,7 +6,6 @@ use \ace\Ace;
 class Router {
 
 	private static $routes = array(
-		'' => 'home.php',
 		'/hc' => 'hc.php',
 		'/id' => 'id.php',
 		'/demo' => 'demo.php',
