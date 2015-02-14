@@ -1,0 +1,225 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. Text in echo
+#: gonzo/searchform.php:7
+msgid ""
+msgstr ""
+
+#. Text in echo
+#: gonzo/includes/widget-latest-posts.php:102
+msgid "(at most 15)"
+msgstr ""
+
+#. Text in function
+#: gonzo/comments.php:34
+msgid "<span class=\"meta-nav\">&larr;</span> Older Comments"
+msgstr ""
+
+#. Text in function
+#: gonzo/author.php:24
+msgid "About %s"
+msgstr ""
+
+#. Text in echo
+#: gonzo/single.php:246
+msgid "About the Author"
+msgstr ""
+
+#. Text in echo
+#: gonzo/404.php:9
+msgid "Apologies, but the page you requested could not be found. Perhaps searching will help."
+msgstr ""
+
+#. Text in function
+#: gonzo/author.php:51
+msgid "Author Archives: %s"
+msgstr ""
+
+#. Text in echo
+#: gonzo/sidebar.php:3
+#: gonzo/footer.php:95
+msgid "Back to Top"
+msgstr ""
+
+#. Text in echo
+#: gonzo/archive.php:13
+msgid "Blog Archives"
+msgstr ""
+
+#. Text in echo
+#: gonzo/loop-module-flex.php:69
+#: gonzo/tag.php:5
+#: gonzo/category.php:10
+msgid "Browsing the"
+msgstr ""
+
+#. Text in echo
+#: gonzo/loop-module-flex.php:69
+#: gonzo/category.php:10
+msgid "Category"
+msgstr ""
+
+#. Text in echo
+#: gonzo/includes/widget_areas.php:113
+msgid "Category Sidebar"
+msgstr ""
+
+#. Text in echo
+#: gonzo/comments.php:46
+msgid "Comments are closed."
+msgstr ""
+
+#. Text in echo
+#: gonzo/includes/widget_areas.php:116
+msgid "Create a sidebar for this category"
+msgstr ""
+
+#. Text in function
+#: gonzo/archive.php:7
+msgid "Daily Archives: <em>%s</em>"
+msgstr ""
+
+#. Text in function
+#: gonzo/includes/plugins/socialbox/socialbox.php:1
+msgid "Every Three Hours"
+msgstr ""
+
+#. Text in echo
+#: gonzo/loop-module-gallery.php:18
+#: gonzo/template-galleries.php:14
+msgid "Galleries"
+msgstr ""
+
+#. Text in echo
+#: gonzo/searchform.php:11
+msgid "Go"
+msgstr ""
+
+#. Text in function
+#: gonzo/includes/widget-latest-posts.php:1
+msgid "Latest Posts with Thumbnails"
+msgstr ""
+
+#. Text in function
+#: gonzo/archive.php:9
+msgid "Monthly Archives: <em>%s</em>"
+msgstr ""
+
+#. Text in function
+#: gonzo/comments.php:35
+msgid "Newer Comments <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#. Text in echo
+#: gonzo/single.php:306
+msgid "No related posts found!"
+msgstr ""
+
+#. Text in echo
+#: gonzo/404.php:7
+msgid "Not Found"
+msgstr ""
+
+#. Text in echo
+#: gonzo/includes/widget-latest-posts.php:100
+msgid "Number of posts to show:"
+msgstr ""
+
+#. Text in echo
+#: gonzo/single.php:68
+#: gonzo/single.php:78
+#: gonzo/single.php:97
+#: gonzo/template-sitemap.php:51
+#: gonzo/loop-blog-style-1.php:46
+msgid "Published on"
+msgstr ""
+
+#. Text in echo
+#: gonzo/template-sitemap.php:53
+#: gonzo/loop-blog-style-1.php:48
+msgid "Read More"
+msgstr ""
+
+#. Text in function
+#: gonzo/includes/widget-latest-posts.php:1
+msgid "Recent Posts"
+msgstr ""
+
+#. Text in echo
+#: gonzo/single.php:256
+msgid "Related Posts"
+msgstr ""
+
+#. Text in echo
+#: gonzo/search.php:5
+msgid "Results for"
+msgstr ""
+
+#. Text in echo
+#: gonzo/includes/shortcodes/soundcloud-shortcode.php:349
+msgid "Save Changes"
+msgstr ""
+
+#. Text in echo
+#: gonzo/searchform.php:9
+msgid "Search"
+msgstr ""
+
+#. Text in echo
+#: gonzo/search.php:45
+msgid "Sorry, no entries found."
+msgstr ""
+
+#. Text in echo
+#: gonzo/tag.php:5
+msgid "Tag"
+msgstr ""
+
+#. Text in function
+#: gonzo/includes/widget-latest-posts.php:1
+msgid "The most recent posts with thumbnails on your blog"
+msgstr ""
+
+#. Text in echo
+#: gonzo/comments.php:4
+msgid "This post is password protected. Enter the password to view any comments."
+msgstr ""
+
+#. Text in echo
+#: gonzo/includes/widget-latest-posts.php:97
+#: gonzo/includes/widget-facebook-fans.php:44
+#: gonzo/includes/widget-video.php:44
+msgid "Title:"
+msgstr ""
+
+#. Text in echo
+#: gonzo/author.php:28
+msgid "Website"
+msgstr ""
+
+#. Text in function
+#: gonzo/archive.php:11
+msgid "Yearly Archives: <em>%s</em>"
+msgstr ""
+
+#. Text in function
+#: gonzo/includes/shortcodes/soundcloud-shortcode.php:354
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#. Text in echo
+#: gonzo/template-galleries.php:63
+#: gonzo/loop-blog-style-2.php:43
+#: gonzo/single.php:68
+#: gonzo/single.php:78
+#: gonzo/single.php:97
+#: gonzo/template-sitemap.php:51
+#: gonzo/loop-blog-style-1.php:46
+#: gonzo/loop-module-a.php:88
+#: gonzo/loop-module-b.php:67
+#: gonzo/search.php:33
+msgid "by"
+msgstr ""

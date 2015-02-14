@@ -1,0 +1,19 @@
+Opens Sans (excellent) @12px base starting scale
+Lora (excellent) @12px
+PT Sans (excellent) @12px
+Cabin Condensed (very good) @13px
+Philosopher (good) @13px
+Istok Web (very good) @12px
+Arimo (good - excellent for body copy) @12px
+PT Serif (good) @13px
+Arvo (could work if paired with a good sans. leading issues though) @12px
+Gentium Basic (ok) @15px
+Droid Serif (ok) @12px
+Amaranth (pretty good, needs to be paired) @13px 
+Cuprum (ok) @14px
+Signika (ok) @13px
+PT Serif Caption (Good) @12px
+Lato (goodish) @12px
+Expletus Sans (good) @12px
+Dosis (goodish) @14px
+Signika Negative (good) @13px

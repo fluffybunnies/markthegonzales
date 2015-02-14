@@ -1,0 +1,167 @@
+/**
+ * Gallery To Slideshow CSS
+ *
+ * @package  Gallery To Slideshow
+ * @author   Matt Varone
+ */
+/* =Wrapper
+-------------------------------------------------------------- */
+div.gallery-to-slideshow-wrapper {
+	width: 100%;
+	border: none;
+	overflow: hidden;
+	padding: 0 0;
+	margin: 0 0;
+	position: relative;
+	background: #fdfdfd;
+	clear: both;
+	display: block;
+	margin-bottom:-12px;
+
+}
+/* =Header
+-------------------------------------------------------------- */
+.gallery-to-slideshow-header {
+	overflow: hidden;
+	padding: 1em;
+	margin: 0 auto 1em;
+	clear: both;
+	display: block;
+	font: bold 0.9em georgia, verdana, arial;
+	text-transform: uppercase;
+	letter-spacing: 0.17em;
+	text-indent: 0;
+	text-shadow: #fff 0 1px;
+}
+.gallery-to-slideshow-title {
+	width:40%;
+	float: left;
+	clear: none;
+	text-align:left;
+}
+.gallery-to-slideshow-caption {
+	width:60%;
+	float: right;
+	clear: none;
+	text-align:right;
+}
+.gallery-to-slideshow-title, .gallery-to-slideshow-caption {
+	margin-bottom: 0;
+}
+/* =Slides
+-------------------------------------------------------------- */
+.flex-container a:active,
+.gallery-to-slideshow a:active {
+	outline: none;
+}
+.gallery-to-slideshow .slides {
+	margin: 0; padding: 0; 
+	list-style: none;
+} 
+.gallery-to-slideshow {
+	width: 100%; 
+	margin: 0 auto; 
+	padding: 0;
+	margin-bottom:-18px;
+}
+.gallery-to-slideshow .slides > li {
+	display: none;
+}
+.gallery-to-slideshow .slides img {
+	max-width: 100%; 
+	display: block; 
+	height:auto;
+	margin:0 auto;
+}
+.gallery-to-slideshow  .slides:after { 
+	content: "."; 
+	display: block; 
+	clear: both; 
+	visibility: hidden; 
+	line-height: 0; 
+	height: 0;
+} 
+html[xmlns] .gallery-to-slideshow .slides {
+	display: block;
+} 
+* html .gallery-to-slideshow  .slides {
+	height: 1%;
+	}
+.no-js .gallery-to-slideshow  .slides > li:first-child {
+	display: block;
+}
+/* =Pager
+-------------------------------------------------------------- */
+.gallery-to-slideshow .pager {
+	text-align: left;
+	margin: 1em auto 0;
+	width: 100%;
+	list-style: none;
+	overflow: hidden;
+}
+.gallery-to-slideshow .pager li {
+	display: inline-block;
+	margin-bottom:1em;
+	vertical-align:top;	
+	
+}
+.gallery-to-slideshow .pager li a {
+	background: white;
+
+	display: block;
+	height: 51px;
+	width:60px;
+	margin-right: 14px;
+	opacity: 1;
+	border-bottom: 3px solid #FFF;
+	overflow:hidden;
+}
+.gallery-to-slideshow .pager li a img {
+margin-left: -63%;
+width: 200%;
+height: 139%;
+margin-top: -18%
+}
+.gallery-to-slideshow .pager li.active a {
+	opacity: 1;
+	border-bottom: 3px solid #000;
+	
+}
+/* =Captions
+-------------------------------------------------------------- */
+.gallery-to-slideshow .slides{
+	zoom: 1; 
+	position: relative;
+	background:url(preloader-dark.gif) scroll transparent no-repeat center center;
+	background-color:#333;
+}
+.gallery-to-slideshow .flex-caption {
+	width: 100%;
+	padding: 2% 0;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	color: #fff;
+
+	font-size:0.9em;
+	margin-bottom: 0 !important;
+	background:rgba(0,0,0,0.7);
+
+}
+
+article#omc-full-article p.pbrighten.flex-caption {color:#FFF;}
+
+.gallery-to-slideshow .flex-caption span {
+  padding: 0 2%;
+}
+/* =Small
+-------------------------------------------------------------- */
+@media ( max-width: 959px ) {
+	.gallery-to-slideshow-title {
+		width: 100%;
+		text-align: center;
+		}
+	.gallery-to-slideshow-caption {
+		display: none;
+		}
+}
