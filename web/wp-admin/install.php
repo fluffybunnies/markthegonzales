@@ -30,9 +30,9 @@ if ( false ) {
  * @since 1.5.1
  * @var bool
  */
-exit('1');
-define( 'WP_INSTALLING', true );
 
+define( 'WP_INSTALLING', true );
+exit('2');
 /** Load WordPress Bootstrap */
 require_once( dirname( dirname( __FILE__ ) ) . '/wp-load.php' );
 
