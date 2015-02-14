@@ -20,7 +20,7 @@ $awsRegion = 'us-east-1';
 $googleAnalyticsId = '';
 
 
-$compile = array(\
+$compile = array(
 	'pop',
 	'shadbox',
 	'tooltip',
