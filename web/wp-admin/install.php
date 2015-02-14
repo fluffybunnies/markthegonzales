@@ -24,15 +24,16 @@ if ( false ) {
 <?php
 }
 
+include __DIR__.'/../bootshell.php';
+
 /**
  * We are installing WordPress.
  *
  * @since 1.5.1
  * @var bool
  */
-
 define( 'WP_INSTALLING', true );
-ini_set('display_errors', 1);error_reporting(E_ALL);
+
 /** Load WordPress Bootstrap */
 require_once( dirname( dirname( __FILE__ ) ) . '/wp-load.php' );
 
