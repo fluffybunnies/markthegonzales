@@ -9,7 +9,7 @@
 	- use separate db name (markthegonzales)
 - move current ace to mark
 - add google analytics to deploy script
-- add logrotate.sh to sire/_common/_bin
+- add logrotate.sh to sire/_common/_bin (or just sire/bin, though these should be merged)
 	- pass it $installDir so it can check $installDir/post_log_rotate.sh
 		- in the for loop, check if arg.indexOf('installDir=') == 0
 	- rotate nginx (and other) logs on sire/mark deploy script
@@ -20,3 +20,4 @@
 - automatically resize images on upload so we dont run out of space
 	- maybe do this with node cron since php image resize sucks
 	- make sure they get uploaded to s3
+
