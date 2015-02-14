@@ -1,7 +1,5 @@
 <?php
 
-exit("yo!\n");
-
 include dirname(__FILE__).'/bootshell.php';
 use \ace\Ace;
 
