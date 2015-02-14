@@ -32,10 +32,10 @@ if ( false ) {
  */
 
 define( 'WP_INSTALLING', true );
-
+ini_set('display_errors', 1);error_reporting(E_ALL);
 /** Load WordPress Bootstrap */
 require_once( dirname( dirname( __FILE__ ) ) . '/wp-load.php' );
-exit('3');
+
 /** Load WordPress Administration Upgrade API */
 require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
 
