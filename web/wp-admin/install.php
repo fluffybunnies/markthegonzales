@@ -24,8 +24,6 @@ if ( false ) {
 <?php
 }
 
-include __DIR__.'/../bootshell.php';
-
 /**
  * We are installing WordPress.
  *
