@@ -1,6 +1,7 @@
 <?php
 
 require_once TEMPLATEPATH.'/../../../ace/misc/wordpress.php';
+use \ace\Ace;
 
 require_once (trailingslashit( get_template_directory() ) . 'includes/user-rating.php');
 
