@@ -10,6 +10,9 @@
 .omc-blog-two.omc-half-width-category div.omc-resize-290 {
 	height: 214px;
 }
+.omc-blog-two.omc-half-width-category .article.omc-blog-two {
+	overflow: hidden;
+}
 
 /* END theme overrides */
 
