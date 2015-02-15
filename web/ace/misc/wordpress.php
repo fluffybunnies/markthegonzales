@@ -14,10 +14,10 @@ add_action('wp_footer', '\ace\misc\hook_wpfooter');
 
 function hook_wphead(){
   echo '<meta name="description" content="Mark IS the Gonzales" />';
-  echo '<link rel="stylesheet" type="text/css" href="'.Ace::vres('/assets/ace.css').'" />';
+  echo '<link rel="stylesheet" type="text/css" href="/ace.css" />';
 }
 
 function hook_wpfooter(){
-	echo '<script src="'.Ace::vres('/assets/ace.js').'" async></script>';
+	echo '<script src="/ace.js" async></script>';
 	Tracking::pageView();
 }
