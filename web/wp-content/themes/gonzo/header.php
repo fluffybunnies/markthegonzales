@@ -18,7 +18,8 @@ $omc_top_menu = get_option_tree('omc_top_menu', $theme_options, false);
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	
-	<title><?php wp_title();?></title>
+	<title><?php is_front_page() ? bloginfo('name') : wp_title(); ?></title>
+
 	
 	<?php if ($omc_favicon !== NULL) { ?><link href="<?php echo $omc_favicon; ?>" rel="shortcut icon"/><?php } ?>
 	
