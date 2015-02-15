@@ -5,7 +5,7 @@
  * @package WordPress
  * @subpackage Administration
  */
-
+exit('Sorry! No can do');
 /** WordPress Administration Bootstrap */
 require_once( dirname( __FILE__ ) . '/admin.php' );
 require( ABSPATH . 'wp-admin/includes/theme-install.php' );
