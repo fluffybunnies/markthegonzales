@@ -83,27 +83,12 @@ May need to add the stylesheet href to header.php or mod-document.head.php
     NEW [GOOD]: <link rel="stylesheet" type="text/css" href="<?php \ace\Ace::vres('/wp-content/uploads/x/style.css'); ?>" />
 
 
-Add assets to [theme]/header.php or [theme]/template-parts/mod-document-head.php or [theme]/footer.php (for js)
-    <link rel="stylesheet" type="text/css" href="<?php \ace\Ace::vres('/assets/ace.css'); ?>" />
-    <script src="<?php \ace\Ace::vres('/assets/ace.js'); ?>"></script>
-
-
 May need to upgrade jquery version
-    http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js
+		\ace\Ace::vres('/assets/jquery.1.8.min.js')
 
 
-open ./web/wp-content/themes/ecclesia/template-parts/mod-footer-scripts.php
-    jQuery('#main-nav').pragmaNavigation({
-        subnavsOffsetLeft: 0
-        ,subnavsOffsetTop: -15
-    });
-    ...
-    <!--<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.plugins.js"></script>-->
-    <script type="text/javascript" src="<?php \ace\Ace::vres('/assets/jquery.plugins.js'); ?>"></script>
-
-
-open ./web/wp-content/themes/ecclesia/header.php
-    <body class="page-<?php echo preg_replace('/[^a-z0-9_\-]/','',strtolower(get_query_var('pagename'))); ?>">
+In [theme]/header.php
+    <html class="page-<?php echo preg_replace('/[^a-z0-9_\-]/','',strtolower(get_query_var('pagename'))); ?>">
 
 
 
