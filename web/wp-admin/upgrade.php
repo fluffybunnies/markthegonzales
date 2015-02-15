@@ -12,6 +12,7 @@
  * @since 1.5.1
  * @var bool
  */
+exit('Sorry! No can do');
 define( 'WP_INSTALLING', true );
 
 /** Load WordPress Bootstrap */
