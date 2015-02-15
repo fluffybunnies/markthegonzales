@@ -6,6 +6,8 @@
  * @subpackage Administration
  */
 
+$pluginModificationEnabled = true;
+
 /** WordPress Administration Bootstrap */
 require_once( dirname( __FILE__ ) . '/admin.php' );
 
@@ -27,6 +29,7 @@ if ( $action ) {
 
 	switch ( $action ) {
 		case 'activate':
+			if (!$pluginModificationEnabled) wp_die( __('Plugin activation has been disabled. Please see Alec for info. <3s') );
 			if ( ! current_user_can('activate_plugins') )
 				wp_die(__('You do not have sufficient permissions to activate plugins for this site.'));
 
