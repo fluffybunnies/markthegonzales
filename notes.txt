@@ -1,34 +1,47 @@
 
--- Initial Installation --
-
-- run /wp-admin/install.php
-	- set temp user
-- backup db
-- create new admin user with strong credentials
-- delete temp_user
-
-
-
 --- To Do ---
 
 52.1.131.33
-- migrate all old sites to new server
-	- ace  alechulce  arrrr  guitar  hope
-	- make sure ace/demo works
-- install wordpress to mark
-	- consider using version and install sql from fabfitfun
-	- use separate db name (markthegonzales)
-- move current ace to mark
+- apply wordpress modifications from hope.txt
 - add google analytics to deploy script
 - add logrotate.sh to sire/_common/_bin (or just sire/bin, though these should be merged)
-	- pass it $installDir so it can check $installDir/post_log_rotate.sh
-		- in the for loop, check if arg.indexOf('installDir=') == 0
+	- pass it the location of a script to run prior to log deletion
+		- in the for loop, check if arg.indexOf('deleteHook=') == 0
 	- rotate nginx (and other) logs on sire/mark deploy script
 	- see if other logs in other repos on same server need rotating
-- disable theme (and other) updates from admin
+- disable theme, plugins, (and other) updates from admin
 	- see what i did with fff
 - add relevant instructions from hope's notes.txt to this file
 - automatically resize images on upload so we dont run out of space
 	- maybe do this with node cron since php image resize sucks
 	- make sure they get uploaded to s3
+- set up webmaster tools
+	- make sitemap generator + submit sitemap url
+- see if node version of compile_ace.php is faster
+	- check happiness
+- figure out why forever monitor is taking up processes
+
+
+
+--- Initial Installation ---
+
+run /wp-admin/install.php in browser
+back up sql: /usr/local/bin/node /root/sire/_common/s3dl/bin/baksql.js -d markthegonzales -b sire-markthegonzales/sql > /var/log/markthegonzales_baksql.log
+
+
+--- Deploying New Server ---
+
+# back up sql
+/usr/local/bin/node /root/sire/_common/s3dl/bin/baksql.js -d markthegonzales -b sire-markthegonzales/sql > /var/log/markthegonzales_baksql.log
+# back up uploads
+node /root/sire/_common/s3dl/bin/shuv.js -d /var/www/markthegonzales/web/wp-content/uploads -b sire-markthegonzales/wp-content/uploads
+# clean up old server
+crontab -r
+killall node
+
+# launch new one
+# local:
+./index.sh _deploy
+# change ip to point at new server
+ssh ubuntu@123.123.123.123 'sudo /root/sire/index.sh hope'
 
