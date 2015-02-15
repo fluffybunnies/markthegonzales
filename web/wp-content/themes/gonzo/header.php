@@ -45,6 +45,8 @@ $omc_top_menu = get_option_tree('omc_top_menu', $theme_options, false);
 	
 	<?php get_template_part('header-options');?>
 	
+	<link rel="stylesheet" type="text/css" href="<?php \ace\Ace::vres('/assets/ace.css'); ?>" />
+
 </head>
 
 <body <?php body_class(); ?> >

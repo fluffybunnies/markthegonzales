@@ -1,5 +1,7 @@
 <?php
 
+require_once TEMPLATEPATH.'/../../../ace/misc/wordpress.php';
+
 require_once (trailingslashit( get_template_directory() ) . 'includes/user-rating.php');
 
 load_theme_textdomain('gonzo', trailingslashit( get_template_directory() ) . 'languages');

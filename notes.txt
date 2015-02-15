@@ -23,10 +23,13 @@
 
 
 
+
 --- Initial Installation ---
 
 run /wp-admin/install.php in browser
 back up sql: /usr/local/bin/node /root/sire/_common/s3dl/bin/baksql.js -d markthegonzales -b sire-markthegonzales/sql > /var/log/markthegonzales_baksql.log
+
+
 
 
 --- Deploying New Server ---
@@ -44,4 +47,64 @@ killall node
 ./index.sh _deploy
 # change ip to point at new server
 ssh ubuntu@123.123.123.123 'sudo /root/sire/index.sh hope'
+
+
+
+
+--- Post theme install ---
+
+Note: These are all part of the repo. Only need to follow these rules if moving to a new theme.
+
+Add to top of index.php
+	include dirname(__FILE__).'/bootshell.php';
+	use \ace\Ace;
+
+
+Add to top of wp-config.php
+	require_once dirname(__FILE__).'/bootshell.php';
+	use \ace\Ace;
+
+
+Add following line to [theme]/functions.php
+    require_once TEMPLATEPATH.'/../../../ace/misc/wordpress.php';
+
+
+!!! havent done this yet, there's content in style.css
+Symlink for style.css needs to be created
+    cd [path to theme]
+    mv style.css style.css.bak
+    ln -s ../../uploads/x/style.css style.css
+
+
+!!! havent done this yet, there's content in style.css
+May need to add the stylesheet href to header.php or mod-document.head.php
+    OLD [BAD]: <link rel="stylesheet" type="text/css" href="<?php \ace\Ace::vres('/wp-content/themes/[theme]/style.css'); ?>" />
+    Note: my file watch does not work on symlinks, we need to include the actual file
+    NEW [GOOD]: <link rel="stylesheet" type="text/css" href="<?php \ace\Ace::vres('/wp-content/uploads/x/style.css'); ?>" />
+
+
+Add assets to [theme]/header.php or [theme]/template-parts/mod-document-head.php or [theme]/footer.php (for js)
+    <link rel="stylesheet" type="text/css" href="<?php \ace\Ace::vres('/assets/ace.css'); ?>" />
+    <script src="<?php \ace\Ace::vres('/assets/ace.js'); ?>"></script>
+
+
+May need to upgrade jquery version
+    http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js
+
+
+open ./web/wp-content/themes/ecclesia/template-parts/mod-footer-scripts.php
+    jQuery('#main-nav').pragmaNavigation({
+        subnavsOffsetLeft: 0
+        ,subnavsOffsetTop: -15
+    });
+    ...
+    <!--<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.plugins.js"></script>-->
+    <script type="text/javascript" src="<?php \ace\Ace::vres('/assets/jquery.plugins.js'); ?>"></script>
+
+
+open ./web/wp-content/themes/ecclesia/header.php
+    <body class="page-<?php echo preg_replace('/[^a-z0-9_\-]/','',strtolower(get_query_var('pagename'))); ?>">
+
+
+
 
