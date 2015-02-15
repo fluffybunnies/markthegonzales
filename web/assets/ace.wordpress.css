@@ -4,6 +4,12 @@
 #omc-sidebar img.wpp-thumbnail {
 	width: 50px;
 }
+.omc-blog-two.omc-half-width-category .img.omc-image-resize {
+	max-height: 220px;
+}
+.omc-blog-two.omc-half-width-category div.omc-resize-290 {
+	height: 214px;
+}
 
 /* END theme overrides */
 
