@@ -74,7 +74,8 @@ $omc_top_menu = get_option_tree('omc_top_menu', $theme_options, false);
 			
 				<?php if ( ! dynamic_sidebar( 'Header Banner' ) ) :  endif; ?>	
 				
-				<a id="omc-logo" href="<?php echo home_url();?>"><img src="<?php if ($omc_logo_image !== NULL) { echo $omc_logo_image; } else { echo get_template_directory_uri();?>/images/logo.png<?php } ?>" alt="<?php bloginfo('name');?> logo" <?php if ($omc_logo_image === NULL) { echo('height="96"'); }?> /></a>
+				<!--<a id="omc-logo" href="<?php echo home_url();?>"><img src="<?php if ($omc_logo_image !== NULL) { echo $omc_logo_image; } else { echo get_template_directory_uri();?>/images/logo.png<?php } ?>" alt="<?php bloginfo('name');?> logo" <?php if ($omc_logo_image === NULL) { echo('height="96"'); }?> /></a>-->
+				<a id="omc-logo" href="<?php echo home_url();?>"><img src="<?php \ace\Ace::vres('/assets/logo.png'); ?>" alt="<?php bloginfo('name');?> logo" <?php if ($omc_logo_image === NULL) { echo('height="96"'); }?> /></a>
 					
 				<nav id="omc-main-navigation">				
 				
