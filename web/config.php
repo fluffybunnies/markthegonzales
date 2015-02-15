@@ -27,4 +27,5 @@ $compile = array(
 	'ui.carousel',
 	'ui.instagram',
 	'ui.twitter',
+	'wordpress',
 );
