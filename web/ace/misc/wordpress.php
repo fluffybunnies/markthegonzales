@@ -13,7 +13,6 @@ add_action('wp_head', '\ace\misc\hook_wphead');
 add_action('wp_footer', '\ace\misc\hook_wpfooter');
 
 function hook_wphead(){
-  echo '<meta name="description" content="Mark IS the Gonzales" />';
   echo '<link rel="stylesheet" type="text/css" href="/ace.css" />';
 }
 
