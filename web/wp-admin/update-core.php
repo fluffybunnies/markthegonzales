@@ -5,7 +5,7 @@
  * @package WordPress
  * @subpackage Administration
  */
-
+exit('Updating has been disabled. Please see Alec for info. <3s');
 /** WordPress Administration Bootstrap */
 require_once( dirname( __FILE__ ) . '/admin.php' );
 
