@@ -67,6 +67,7 @@ class Ace {
 		Optimize asset caching by marking url with file-modified-time
 	*/
 	public static function vres($path, $return=false) {
+		if (!empty($_GET['debug'])) { echo "$path\n"; echo WEBROOT."\n"; }
 		$p = $path . (strpos($path,'?') === false ? '?' : '&') . filemtime(WEBROOT.$path);
 		if ($return)
 			return $p;

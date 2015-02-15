@@ -1,0 +1,37 @@
+/*
+Theme Name: Gonzo
+Theme URI: http://www.themeforest.net
+Description: Minimalist, Responsive Magazine
+Version: 1.9.4
+Author: Ollie McCarthy
+Author URI: http:///www.themeforest.net/user/OllieMcCarthy
+License URI: http://themeforest.net/licenses/regular_extended
+License: Themeforest Regular License
+Tags: light, white, black,  two-columns, left-sidebar,   custom-colors, custom-menu,  featured-images, full-width-template, post-formats,  theme-options, translation-ready
+*/
+
+@import url("/wp-content/themes/gonzo/css/style_reset.css") ; 
+
+@import url("/wp-content/themes/gonzo/css/flexslider.css");
+
+@import url("/wp-content/themes/gonzo/css/elastislide.css");
+
+@import url("/wp-content/themes/gonzo/css/style_main.css") ; 
+
+@import url("/wp-content/themes/gonzo/css/style_667.css");
+
+@import url("/wp-content/themes/gonzo/css/style_480.css");
+
+@import url("/wp-content/themes/gonzo/css/style_414.css");
+
+@import url("/wp-content/themes/gonzo/css/style_375.css");
+
+@import url("/wp-content/themes/gonzo/css/style_320.css");
+
+@import url("/wp-content/themes/gonzo/css/style_768.css");
+
+@import url("/wp-content/themes/gonzo/css/style_1024.css");
+
+@import url("/wp-content/themes/gonzo/css/tabber.css");
+
+@import url("/wp-content/themes/gonzo/css/wpp.css");

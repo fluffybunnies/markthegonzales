@@ -2,7 +2,6 @@
 --- To Do ---
 
 52.1.131.33
-- add google analytics to deploy script
 - add logrotate.sh to sire/_common/_bin (or just sire/bin, though these should be merged)
 	- pass it the location of a script to run prior to log deletion
 		- in the for loop, check if arg.indexOf('deleteHook=') == 0
@@ -10,16 +9,8 @@
 	- see if other logs in other repos on same server need rotating
 - disable theme, plugins, (and other) updates from admin
 	- see what i did with fff
-- add relevant instructions from hope's notes.txt to this file
-- automatically resize images on upload so we dont run out of space
-	- maybe do this with node cron since php image resize sucks
-	- make sure they get uploaded to s3
-- set up webmaster tools
-	- make sitemap generator + submit sitemap url
 - see if node version of compile_ace.php is faster
 	- check happiness
-- figure out why forever monitor is taking up processes
-
 
 
 
@@ -30,7 +21,7 @@ Run /wp-admin/install.php in browser
 Review settings in wp-admin and make appropriate updates
 
 back up sql
-/usr/local/bin/node /root/sire/_common/s3dl/bin/baksql.js -d markthegonzales -b sire-markthegonzales/sql > /var/log/markthegonzales_baksql.log
+/usr/local/bin/node /root/sire/_common/s3dl/bin/baksql.js -d markthegonzales -b sire-markthegonzales/sql
 
 Set up google analytics and webmaster tools
 
@@ -73,14 +64,12 @@ Add following line to [theme]/functions.php
     require_once TEMPLATEPATH.'/../../../ace/misc/wordpress.php';
 
 
-!!! havent done this yet, there's content in style.css
 Symlink for style.css needs to be created
     cd [path to theme]
     mv style.css style.css.bak
     ln -s ../../uploads/x/style.css style.css
 
 
-!!! havent done this yet, there's content in style.css
 Point theme's style.css to s3 synced copy.
 Note: my file watch does not work on symlinks, we need to include the actual file
 In [theme]/functions.php (sometimes we need to change header.php):
