@@ -31,7 +31,8 @@ function load_gonzo_child_styles()
     if (is_admin()) return;
     
     wp_dequeue_style('main_css');
-    wp_enqueue_style('main_css', get_stylesheet_directory_uri() . '/style.css');
+    //wp_enqueue_style('main_css', get_stylesheet_directory_uri() . '/style.css');
+    wp_enqueue_style('main_css', Ace::vres('/wp-content/uploads/x/style.css'));
 }
 add_action('init', 'load_gonzo_child_styles', 11);
 
