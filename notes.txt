@@ -2,6 +2,8 @@
 --- To Do ---
 
 52.1.131.33
+- get mark@markthegonzales.com to forward to his yahoo acct
+	- should be able to do this at dns level 
 - add logrotate.sh to sire/_common/_bin (or just sire/bin, though these should be merged)
 	- pass it the location of a script to run prior to log deletion
 		- in the for loop, check if arg.indexOf('deleteHook=') == 0
