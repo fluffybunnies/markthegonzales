@@ -2,7 +2,6 @@
 --- To Do ---
 
 52.1.131.33
-- apply wordpress modifications from hope.txt
 - add google analytics to deploy script
 - add logrotate.sh to sire/_common/_bin (or just sire/bin, though these should be merged)
 	- pass it the location of a script to run prior to log deletion
