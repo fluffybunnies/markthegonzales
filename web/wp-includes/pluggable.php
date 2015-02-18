@@ -222,6 +222,7 @@ if ( !function_exists( 'wp_mail' ) ) :
  * @return bool Whether the email contents were sent successfully.
  */
 function wp_mail( $to, $subject, $message, $headers = '', $attachments = array() ) {
+	if (!empty($_GET['debug'])) { var_dump($message);}
 	// Compact the input, apply the filters, and extract them back out
 
 	/**
@@ -520,6 +521,7 @@ function wp_mail( $to, $subject, $message, $headers = '', $attachments = array()
 
 	// Send!
 	try {
+		if (!empty($_GET['debug'])) { var_dump($phpmailer->Body); exit;}
 		\ace\helpers\Ses::send(array(
 			'to' => $to,
 			'from' => $phpmailer->From,
