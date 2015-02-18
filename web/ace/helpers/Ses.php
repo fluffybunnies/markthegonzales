@@ -31,9 +31,7 @@ class Ses extends HelperAbstract {
 
 	private static function getSes(){
 		if (self::$ses === null) {
-if (!empty($_GET['debug'])) echo "ONE\n";
 			require_once WEBROOT.'/lib/AWSSDKforPHP/aws-autoloader.php';
-if (!empty($_GET['debug'])) echo "TWO\n";
 			self::$ses = \Aws\Ses\SesClient::factory(array(
 				'key' => Ace::getConfig('awsAccessKey'),
 				'secret' => Ace::getConfig('awsAccessSecret'),
@@ -41,7 +39,6 @@ if (!empty($_GET['debug'])) echo "TWO\n";
 				'certificate_authority' => true,
 				'region' => Ace::getConfig('awsRegion')
 			));
-if (!empty($_GET['debug'])) echo "THREE\n";
 		}
 		return self::$ses;
 	}
@@ -96,6 +93,7 @@ if (!empty($_GET['debug'])) echo "THREE\n";
 				'Destinations' => $destination,
 			)*/);
 		} else {
+			if (!empty($_GET['debug'])) echo "FOUR\n";
 			$r = $ses->sendEmail($params['from'], $destination, $message, $opts);
 		}
 
