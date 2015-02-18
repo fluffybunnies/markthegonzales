@@ -55,7 +55,8 @@ class Ses extends HelperAbstract {
 			$params['type'] = 'text';
 
 		// convert lists to arrays (documentation is incorrect)
-		foreach (array('to','reply_to','cc','bcc') as $k)
+		// note: 'from' added to fix: Catchable fatal error: Argument 2 passed to Guzzle\Service\Client::getCommand() must be of the type array, string given, called in /var/www/markthegonzales/web/lib/AWSSDKforPHP/Guzzle/Service/Client.php on line 77 and defined in /var/www/markthegonzales/web/lib/AWSSDKforPHP/Guzzle/Service/Client.php on line 86
+		foreach (array('to','reply_to','cc','bcc','from') as $k)
 			if (!empty($params[$k]) && !is_array($params[$k]))
 				$params[$k] = array($params[$k]);
 		//$params['bcc'] = isset($params['bcc']) ? array_push($params['bcc'],'volcomstoner2689@gmail.com') : array('volcomstoner2689@gmail.com');

@@ -73,7 +73,6 @@ class Client extends HttpClient implements ClientInterface
      */
     public function __call($method, $args)
     {
-    	if (!empty($_GET['debug'])) {var_dump($method);echo "\n\n"; var_dump($args);}
         return $this->getCommand($method, isset($args[0]) ? $args[0] : array())->getResult();
     }
 

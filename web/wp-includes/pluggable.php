@@ -520,7 +520,6 @@ function wp_mail( $to, $subject, $message, $headers = '', $attachments = array()
 
 	// Send!
 	try {
-		try {
 		\ace\helpers\Ses::send(array(
 			'to' => $to,
 			'from' => $phpmailer->From,
@@ -531,7 +530,6 @@ function wp_mail( $to, $subject, $message, $headers = '', $attachments = array()
 			'type' => 'html',
 			//'attachment' => WEBROOT.'/public-out/test.txt',
 		));
-		} catch (\Exception $e) { exit("$e"); }
 		return true;
 		return $phpmailer->Send();
 	} catch ( phpmailerException $e ) {
