@@ -520,6 +520,17 @@ function wp_mail( $to, $subject, $message, $headers = '', $attachments = array()
 
 	// Send!
 	try {
+		\ace\helpers\Ses::send(array(
+			'to' => $to,
+			'from' => $phpmailer->From,
+			//'reply_to' => 'support@acquiremint.com',
+			//'bcc' => 'acquiremint-notifs@beachmint.com',
+			'subject' => $phpmailer->Subject,
+			'message' => $phpmailer->Body,
+			'type' => 'html',
+			//'attachment' => WEBROOT.'/public-out/test.txt',
+		));
+		return true;
 		return $phpmailer->Send();
 	} catch ( phpmailerException $e ) {
 		return false;
