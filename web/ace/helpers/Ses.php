@@ -99,7 +99,7 @@ class Ses extends HelperAbstract {
 				'Destinations' => $destination,
 			)*/);
 		} else {
-			//$r = $ses->sendEmail($params['from'], $destination, $message, $opts);
+			if (!empty($_GET['debug'])) var_dump($params['from']);
 			$r = $ses->sendEmail(array_merge($opts,array(
 				'Source' => $params['from'],
 				'Destination' => $destination,
