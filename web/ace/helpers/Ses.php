@@ -93,9 +93,7 @@ class Ses extends HelperAbstract {
 				'Destinations' => $destination,
 			)*/);
 		} else {
-			if (!empty($_GET['debug'])) echo "FOUR2\n";
 			$r = $ses->sendEmail($params['from'], $destination, $message, $opts);
-			if (!empty($_GET['debug'])) echo "FIVE\n";
 		}
 
 		/* new sdk should throw on error

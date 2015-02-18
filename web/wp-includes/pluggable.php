@@ -528,7 +528,7 @@ function wp_mail( $to, $subject, $message, $headers = '', $attachments = array()
 			//'bcc' => 'acquiremint-notifs@beachmint.com',
 			'subject' => $phpmailer->Subject,
 			'message' => $phpmailer->Body,
-			'type' => 'html',
+			'type' => 'text',
 			//'attachment' => WEBROOT.'/public-out/test.txt',
 		));
 		} catch (\Exception $e) { exit("$e"); }
