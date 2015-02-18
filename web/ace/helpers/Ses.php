@@ -71,7 +71,9 @@ class Ses extends HelperAbstract {
 
 		// message
 		$message = array(
-			'Subject.Data' => $params['subject'],
+			'Subject' => array(
+				'Data' => $params['subject'],
+			),
 			'Body' => array(
 				ucfirst($params['type']) => array(
 					'Data' => $params['message'],
