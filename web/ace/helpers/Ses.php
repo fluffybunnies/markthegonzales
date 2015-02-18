@@ -31,7 +31,9 @@ class Ses extends HelperAbstract {
 
 	private static function getSes(){
 		if (self::$ses === null) {
+if (!empty($_GET['debug'])) echo "ONE\n";
 			require_once WEBROOT.'/lib/AWSSDKforPHP/aws-autoloader.php';
+if (!empty($_GET['debug'])) echo "TWO\n";
 			self::$ses = \Aws\Ses\SesClient::factory(array(
 				'key' => Ace::getConfig('awsAccessKey'),
 				'secret' => Ace::getConfig('awsAccessSecret'),
@@ -39,6 +41,7 @@ class Ses extends HelperAbstract {
 				'certificate_authority' => true,
 				'region' => Ace::getConfig('awsRegion')
 			));
+if (!empty($_GET['debug'])) echo "THREE\n";
 		}
 		return self::$ses;
 	}
