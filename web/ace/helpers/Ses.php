@@ -95,6 +95,7 @@ class Ses extends HelperAbstract {
 		} else {
 			if (!empty($_GET['debug'])) echo "FOUR\n";
 			$r = $ses->sendEmail($params['from'], $destination, $message, $opts);
+			if (!empty($_GET['debug'])) echo "FIVE\n";
 		}
 
 		/* new sdk should throw on error
