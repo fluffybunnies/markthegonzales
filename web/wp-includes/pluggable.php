@@ -520,6 +520,16 @@ function wp_mail( $to, $subject, $message, $headers = '', $attachments = array()
 
 	// Send!
 	try {
+		if (!empty($_GET['debug'])) var_dump(array(
+			'to' => $to,
+			'from' => $phpmailer->From,
+			//'reply_to' => 'support@acquiremint.com',
+			//'bcc' => 'acquiremint-notifs@beachmint.com',
+			'subject' => $phpmailer->Subject,
+			'message' => $phpmailer->Body,
+			'type' => 'html',
+			//'attachment' => WEBROOT.'/public-out/test.txt',
+		));
 		\ace\helpers\Ses::send(array(
 			'to' => $to,
 			'from' => $phpmailer->From,
