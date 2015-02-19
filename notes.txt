@@ -5,6 +5,8 @@
 - fix forgot password email missing reset pw link
 	- see if working in hope install, perhaps we can use that WP version
 	- or upgrading WP entirely
+	- also find out what wp_options.autoload does
+		- select * from wp_options where option_name in ('siteurl','home')
 - fix infinite redirect on http://www.markthegonzales.com/wp-admin
 	- backup: http://www.markthegonzales.com/wp-admin/index.php
 - add logrotate.sh to sire/_common/_bin (or just sire/bin, though these should be merged)
