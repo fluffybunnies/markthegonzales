@@ -40,7 +40,7 @@ class Protect extends HelperAbstract {
 				$log = array_splice($log, $numLogs-$bank);
 			if (!file_put_contents($fn, json_encode($log)))
 				throw new \Exception('failed to write log file');
-			if (!empty($_GET['debug'])) Ace::varDump($log);
+			//if (!empty($_GET['debug'])) Ace::varDump($log);
 			if ($call['s'] == 0)
 				throw new \Exception('too many requests');
 		} catch (\Exception $e) {
