@@ -726,9 +726,8 @@ class Plugin_Upgrader extends WP_Upgrader {
 		$parsed_args = wp_parse_args( $args, $defaults );
 
 		$this->init();
-		exit('3232323');
 		$this->install_strings();
-
+exit('10');
 		add_filter('upgrader_source_selection', array($this, 'check_package') );
 
 		$this->run( array(
