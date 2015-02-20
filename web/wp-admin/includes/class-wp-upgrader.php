@@ -151,10 +151,7 @@ class WP_Upgrader {
 	 */
 	public function fs_connect( $directories = array(), $allow_relaxed_file_ownership = false ) {
 		global $wp_filesystem;
-var_dump($directories[0]);
-var_dump($allow_relaxed_file_ownership);
-var_dump($this->skin->request_filesystem_credentials( false, $directories[0], $allow_relaxed_file_ownership ));
-exit;
+var_dump($directories);exit;
 		if ( false === ( $credentials = $this->skin->request_filesystem_credentials( false, $directories[0], $allow_relaxed_file_ownership ) ) ) {
 			return false;
 		}
@@ -745,6 +742,7 @@ class Plugin_Upgrader extends WP_Upgrader {
 		) );
 
 		remove_filter('upgrader_source_selection', array($this, 'check_package') );
+
 		if ( ! $this->result || is_wp_error($this->result) )
 			return $this->result;
 
