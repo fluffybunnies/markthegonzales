@@ -14,7 +14,7 @@ class Router {
 		'/ace.css' => 'ace/scripts/compile-ace.php',
 	);
 	private static $redirects = array(
-		'/wp-admin' => 'wp-admin/index.php',
+		'/wp-admin' => '/wp-admin/index.php',
 	);
 	private static $apiPath = '/ace/api';
 
