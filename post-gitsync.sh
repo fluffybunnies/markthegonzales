@@ -33,3 +33,4 @@ chown -R www-data $dir/web/wp-content
 
 # reset:
 # rm -fr /var/www/markthegonzales/web/wp-content/plugins/mailchimp-for-wp && chown -R root /var/www/markthegonzales/ && /root/sire/_common/gitsync.sh '/var/www/markthegonzales' 'master'
+# http://www.markthegonzales.com/wp-admin/update.php?action=install-plugin&plugin=mailchimp-for-wp&_wpnonce=ce4bc0ddec

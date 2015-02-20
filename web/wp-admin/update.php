@@ -6,6 +6,8 @@
  * @subpackage Administration
  */
 
+$codebaseModificationEnabled = true;
+
 if ( ! defined( 'IFRAME_REQUEST' ) && isset( $_GET['action'] ) && in_array( $_GET['action'], array( 'update-selected', 'activate-plugin', 'update-selected-themes' ) ) )
 	define( 'IFRAME_REQUEST', true );
 
@@ -20,6 +22,7 @@ if ( isset($_GET['action']) ) {
 	$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 
 	if ( 'update-selected' == $action ) {
+		if (!$codebaseModificationEnabled) wp_die( __('Plugin updating has been disabled. Please see Alec for info. <3s') );
 		if ( ! current_user_can( 'update_plugins' ) )
 			wp_die( __( 'You do not have sufficient permissions to update plugins for this site.' ) );
 
@@ -46,6 +49,7 @@ if ( isset($_GET['action']) ) {
 		iframe_footer();
 
 	} elseif ( 'upgrade-plugin' == $action ) {
+		if (!$codebaseModificationEnabled) wp_die( __('Plugin upgrading has been disabled. Please see Alec for info. <3s') );
 		if ( ! current_user_can('update_plugins') )
 			wp_die(__('You do not have sufficient permissions to update plugins for this site.'));
 
@@ -67,6 +71,7 @@ if ( isset($_GET['action']) ) {
 		include(ABSPATH . 'wp-admin/admin-footer.php');
 
 	} elseif ('activate-plugin' == $action ) {
+		if (!$codebaseModificationEnabled) wp_die( __('Plugin activation has been disabled. Please see Alec for info. <3s') );
 		if ( ! current_user_can('update_plugins') )
 			wp_die(__('You do not have sufficient permissions to update plugins for this site.'));
 
@@ -91,7 +96,7 @@ if ( isset($_GET['action']) ) {
 		}
 		iframe_footer();
 	} elseif ( 'install-plugin' == $action ) {
-
+		if (!$codebaseModificationEnabled) wp_die( __('Plugin installation has been disabled. Please see Alec for info. <3s') );
 		if ( ! current_user_can('install_plugins') )
 			wp_die( __( 'You do not have sufficient permissions to install plugins on this site.' ) );
 
@@ -122,7 +127,7 @@ if ( isset($_GET['action']) ) {
 		include(ABSPATH . 'wp-admin/admin-footer.php');
 
 	} elseif ( 'upload-plugin' == $action ) {
-
+		if (!$codebaseModificationEnabled) wp_die( __('Plugin uploading has been disabled. Please see Alec for info. <3s') );
 		if ( ! current_user_can( 'upload_plugins' ) ) {
 			wp_die( __( 'You do not have sufficient permissions to install plugins on this site.' ) );
 		}
@@ -150,7 +155,7 @@ if ( isset($_GET['action']) ) {
 		include(ABSPATH . 'wp-admin/admin-footer.php');
 
 	} elseif ( 'upgrade-theme' == $action ) {
-
+		if (!$codebaseModificationEnabled) wp_die( __('Theme updating has been disabled. Please see Alec for info. <3s') );
 		if ( ! current_user_can('update_themes') )
 			wp_die(__('You do not have sufficient permissions to update themes for this site.'));
 
@@ -172,6 +177,7 @@ if ( isset($_GET['action']) ) {
 
 		include(ABSPATH . 'wp-admin/admin-footer.php');
 	} elseif ( 'update-selected-themes' == $action ) {
+		if (!$codebaseModificationEnabled) wp_die( __('Theme updating has been disabled. Please see Alec for info. <3s') );
 		if ( ! current_user_can( 'update_themes' ) )
 			wp_die( __( 'You do not have sufficient permissions to update themes for this site.' ) );
 
@@ -197,7 +203,7 @@ if ( isset($_GET['action']) ) {
 
 		iframe_footer();
 	} elseif ( 'install-theme' == $action ) {
-
+		if (!$codebaseModificationEnabled) wp_die( __('Theme installation has been disabled. Please see Alec for info. <3s') );
 		if ( ! current_user_can('install_themes') )
 			wp_die( __( 'You do not have sufficient permissions to install themes on this site.' ) );
 
@@ -227,7 +233,7 @@ if ( isset($_GET['action']) ) {
 		include(ABSPATH . 'wp-admin/admin-footer.php');
 
 	} elseif ( 'upload-theme' == $action ) {
-
+		if (!$codebaseModificationEnabled) wp_die( __('Theme uploading has been disabled. Please see Alec for info. <3s') );
 		if ( ! current_user_can( 'upload_themes' ) ) {
 			wp_die( __( 'You do not have sufficient permissions to install themes on this site.' ) );
 		}
@@ -258,6 +264,7 @@ if ( isset($_GET['action']) ) {
 		include(ABSPATH . 'wp-admin/admin-footer.php');
 
 	} else {
+		if (!$codebaseModificationEnabled) wp_die( __('Custom updating has been disabled. Please see Alec for info. <3s') );
 		/**
 		 * Fires when a custom plugin or theme update request is received.
 		 *
