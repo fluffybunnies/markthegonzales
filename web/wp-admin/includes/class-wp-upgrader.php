@@ -151,7 +151,8 @@ class WP_Upgrader {
 	 */
 	public function fs_connect( $directories = array(), $allow_relaxed_file_ownership = false ) {
 		global $wp_filesystem;
-
+var_dump($directories[0]);
+var_dump($allow_relaxed_file_ownership);exit;
 		if ( false === ( $credentials = $this->skin->request_filesystem_credentials( false, $directories[0], $allow_relaxed_file_ownership ) ) ) {
 			return false;
 		}
@@ -546,7 +547,6 @@ class WP_Upgrader {
 		// Connect to the Filesystem first.
 		$res = $this->fs_connect( array( WP_CONTENT_DIR, $options['destination'] ) );
 		// Mainly for non-connected filesystem.
-		var_dump($res);exit;
 		if ( ! $res ) {
 			if ( ! $options['is_multi'] ) {
 				$this->skin->footer();
