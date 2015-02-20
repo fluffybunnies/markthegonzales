@@ -38,6 +38,11 @@ Run /wp-admin/install.php in browser
 Add index to wp_options.autoload
 		alter table wp_options add index autoload_(autoload);
 
+Protect wp-login
+		require_once dirname(__FILE__).'/bootshell.php';
+		use \ace\helpers\Protect;
+		Protect::preventBruteForce(1, true); // 1 call per second
+
 Review settings in wp-admin and make appropriate updates
 
 back up sql
