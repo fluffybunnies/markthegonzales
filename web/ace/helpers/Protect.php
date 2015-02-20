@@ -11,14 +11,9 @@ use \ace\HelperAbstract;
 
 class Protect extends HelperAbstract {
 
-	public static function preventBruteForce($opts=array()){
-		$opts = array_merge(array(
-			'cap' => 1, // 1 call per second
-			'bank' => 50,
-			'usePath' => true,
-		),$opts);
+	public static function preventBruteForce($cap=1, $usePath=true, $bank=50){
 		try {
-			$key = md5($opts['usePath'] ? REQUEST_PATH : $_SERVER['REQUEST_URI']);
+			$key = md5($usePath ? REQUEST_PATH : $_SERVER['REQUEST_URI']);
 			$fn = WEBROOT."/public-out/protect.preventBruteForce.$key";
 			if (is_file($fn)) {
 				$log = json_decode(file_get_contents($fn), true);
@@ -37,12 +32,12 @@ class Protect extends HelperAbstract {
 				$lastCall = end($log);
 				if (!is_array($lastCall) || !is_numeric(Ace::g($lastCall,'t')))
 					throw new \Exception('corrupted log file; item');
-				if ($call['t'] < $lastCall['t']+$opts['cap'])
+				if ($call['t'] < $lastCall['t']+$cap)
 					$call['s'] = 0;
 			}
 			$log[] = $call;
-			if (($numLogs = count($log)) > $opts['bank'])
-				$log = array_splice($log, $numLogs-$opts['bank']);
+			if (($numLogs = count($log)) > $bank)
+				$log = array_splice($log, $numLogs-$bank);
 			if (!file_put_contents($fn, json_encode($log)))
 				throw new \Exception('failed to write log file');
 			if (!empty($_GET['debug'])) Ace::varDump($log);
