@@ -11,7 +11,7 @@ use \ace\HelperAbstract;
 
 class Protect extends HelperAbstract {
 
-	public static function preventTooMany($opts=array()){
+	public static function preventBruteForce($opts=array()){
 		$opts = array_merge(array(
 			'cap' => 1000, // 1 call per second
 			'bank' => 50,

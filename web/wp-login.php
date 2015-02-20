@@ -10,7 +10,7 @@
 
 require_once dirname(__FILE__).'/bootshell.php';
 use \ace\helpers\Protect;
-Protect::preventTooMany(array(
+Protect::preventBruteForce(array(
 	'cap' => 1000, // 1 call per second
 	'bank' => 50,
 ));
