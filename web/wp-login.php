@@ -8,12 +8,11 @@
  * @package WordPress
  */
 
-require_once dirname(__FILE__).'/bootshell.php';
-use \ace\helpers\Protect;
-Protect::preventBruteForce(1, true); // 1 call per second
-
 /** Make sure that the WordPress bootstrap has run before continuing. */
 require( dirname(__FILE__) . '/wp-load.php' );
+
+use \ace\helpers\Protect;
+Protect::preventBruteForce(1, true); // 1 call per second
 
 // Redirect to https login if forced to use SSL
 if ( force_ssl_admin() && ! is_ssl() ) {
