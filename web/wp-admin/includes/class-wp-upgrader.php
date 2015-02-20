@@ -724,8 +724,9 @@ class Plugin_Upgrader extends WP_Upgrader {
 			'clear_update_cache' => true,
 		);
 		$parsed_args = wp_parse_args( $args, $defaults );
-exit('wef');
+
 		$this->init();
+		exit('3232323');
 		$this->install_strings();
 
 		add_filter('upgrader_source_selection', array($this, 'check_package') );
