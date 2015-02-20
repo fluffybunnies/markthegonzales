@@ -926,6 +926,7 @@ function get_filesystem_method( $args = array(), $context = false, $allow_relaxe
 				$temp_file_owner = @fileowner( $temp_file_name );
 			}
 var_dump(func_get_args());
+var_dump(__FILE__);
 var_dump($temp_file_name);
 var_dump($wp_file_owner);
 var_dump($temp_file_owner);
