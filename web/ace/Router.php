@@ -12,6 +12,7 @@ class Router {
 		'/test' => 'test.php',
 		'/ace.js' => 'ace/scripts/compile-ace.php',
 		'/ace.css' => 'ace/scripts/compile-ace.php',
+		'/wp-admin' => 'wp-admin/index.php',
 	);
 	private static $apiPath = '/ace/api';
 
