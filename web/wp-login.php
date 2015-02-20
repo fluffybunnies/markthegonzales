@@ -11,8 +11,7 @@
 require_once dirname(__FILE__).'/bootshell.php';
 use \ace\helpers\Protect;
 Protect::preventBruteForce(array(
-	'cap' => 10, // 1 call per second
-	'bank' => 2,
+	'cap' => 1, // 1 call per second
 	'usePath' => true,
 ));
 
