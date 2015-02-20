@@ -18,7 +18,7 @@ class Protect extends HelperAbstract {
 			'usePath' => true,
 		),$opts);
 		$key = $opts['usePath'] ? REQUEST_PATH : $_SERVER['REQUEST_URI'];
-		$fn = REPO_ROOT."/out/protect.preventBruteForce.$key";
+		$fn = REPOROOT."/out/protect.preventBruteForce.$key";
 		if (is_file($fn)) {
 			$log = json_decode(file_get_contents($fn), true);
 			if (!is_array($log))
