@@ -41,6 +41,7 @@ class Router {
 	private static function redirect($where){
 		header('HTTP/1.1 301 Moved Permanently');
 		header("Location: $url");
+		exit;
 	}
 
 }
