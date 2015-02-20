@@ -911,12 +911,13 @@ function get_filesystem_method( $args = array(), $context = false, $allow_relaxe
 	}
 
 	$context = trailingslashit( $context );
-var_dump(func_get_args());
-var_dump($method);
-exit;
+
 	if ( ! $method ) {
 
 		$temp_file_name = $context . 'temp-write-test-' . time();
+var_dump(func_get_args());
+var_dump($temp_file_name);
+exit;
 		$temp_handle = @fopen($temp_file_name, 'w');
 		if ( $temp_handle ) {
 
