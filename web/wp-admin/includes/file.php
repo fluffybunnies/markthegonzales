@@ -983,6 +983,7 @@ function get_filesystem_method( $args = array(), $context = false, $allow_relaxe
  * @return boolean False on failure. True on success.
  */
 function request_filesystem_credentials($form_post, $type = '', $error = false, $context = false, $extra_fields = null, $allow_relaxed_file_ownership = false ) {
+var_dump(func_get_args());
 exit('FILE');
 	/**
 	 * Filter the filesystem credentials form output.
