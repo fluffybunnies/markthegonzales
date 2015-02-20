@@ -105,3 +105,11 @@ Add this to web/wp-includes/pluggable.php at the bottom of wp_mail()
 		then verify wordpress@markthegonzales.com in amazon ses
 
 
+
+--- Installing Plugin ---
+
+Install plugin on server
+
+Download to local
+		scp -r ubuntu@52.1.131.33:/var/www/markthegonzales/web/wp-content/plugins/[plugin-name] ./web/wp-content/plugins/
+
