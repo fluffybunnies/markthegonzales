@@ -929,6 +929,7 @@ var_dump(func_get_args());
 var_dump($temp_file_name);
 var_dump($wp_file_owner);
 var_dump($temp_file_owner);
+var_dump($allow_relaxed_file_ownership);
 exit;
 			if ( $wp_file_owner !== false && $wp_file_owner === $temp_file_owner ) {
 				// WordPress is creating files as the same owner as the WordPress files, 
