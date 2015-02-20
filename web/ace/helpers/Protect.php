@@ -19,7 +19,7 @@ class Protect extends HelperAbstract {
 		),$opts);
 		try {
 			$key = md5($opts['usePath'] ? REQUEST_PATH : $_SERVER['REQUEST_URI']);
-			$fn = REPOROOT."/out/protect.preventBruteForce.$key";
+			$fn = WEBROOT."/public-out/protect.preventBruteForce.$key";
 			if (is_file($fn)) {
 				$log = json_decode(file_get_contents($fn), true);
 				if (!is_array($log))
