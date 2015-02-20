@@ -925,13 +925,7 @@ function get_filesystem_method( $args = array(), $context = false, $allow_relaxe
 				$wp_file_owner = @fileowner( __FILE__ );
 				$temp_file_owner = @fileowner( $temp_file_name );
 			}
-var_dump(func_get_args());
-var_dump(__FILE__);
-var_dump($temp_file_name);
-var_dump($wp_file_owner);
-var_dump($temp_file_owner);
-var_dump($allow_relaxed_file_ownership);
-exit;
+
 			if ( $wp_file_owner !== false && $wp_file_owner === $temp_file_owner ) {
 				// WordPress is creating files as the same owner as the WordPress files, 
 				// this means it's safe to modify & create new files via PHP.
