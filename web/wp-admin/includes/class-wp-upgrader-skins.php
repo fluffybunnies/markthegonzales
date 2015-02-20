@@ -44,7 +44,6 @@ class WP_Upgrader_Skin {
 	}
 
 	public function request_filesystem_credentials( $error = false, $context = false, $allow_relaxed_file_ownership = false ) {
-exit('CLASS');
 		$url = $this->options['url'];
 		if ( ! $context ) {
 			$context = $this->options['context'];
