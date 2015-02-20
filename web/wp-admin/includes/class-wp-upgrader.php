@@ -729,7 +729,7 @@ class Plugin_Upgrader extends WP_Upgrader {
 		$this->install_strings();
 
 		add_filter('upgrader_source_selection', array($this, 'check_package') );
-exit('11');
+
 		$this->run( array(
 			'package' => $package,
 			'destination' => WP_PLUGIN_DIR,
@@ -742,7 +742,7 @@ exit('11');
 		) );
 
 		remove_filter('upgrader_source_selection', array($this, 'check_package') );
-
+var_dump($this);exit;
 		if ( ! $this->result || is_wp_error($this->result) )
 			return $this->result;
 
