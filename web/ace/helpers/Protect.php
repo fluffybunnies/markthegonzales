@@ -1,8 +1,4 @@
 <?php
-/*
-	Note
-		- reply_to is ignored when sending attachments
-*/
 
 namespace ace\helpers;
 use \ace\Ace;
