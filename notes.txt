@@ -47,6 +47,19 @@ Review settings in wp-admin and make appropriate updates
 back up sql
 		/usr/local/bin/node /root/sire/_common/s3dl/bin/baksql.js -d markthegonzales -b sire-markthegonzales/sql
 
+Add this to web/wp-includes/pluggable.php at the bottom of wp_mail()
+		\ace\helpers\Ses::send(array(
+			'to' => $to,
+			'from' => $phpmailer->From,
+			//'reply_to' => 'support@acquiremint.com',
+			//'bcc' => 'acquiremint-notifs@beachmint.com',
+			'subject' => $phpmailer->Subject,
+			'message' => $phpmailer->Body,
+			'type' => 'html',
+		));
+
+		then verify wordpress@markthegonzales.com in amazon ses
+
 Disable plugins/core-update/themes
 		./web/wp-admin/update.php 
 		./web/wp-admin/plugins.php
@@ -116,19 +129,6 @@ May need to upgrade jquery version
 In [theme]/header.php
     <html class="page-<?php echo preg_replace('/[^a-z0-9_\-]/','',strtolower(get_query_var('pagename'))); ?>">
 
-
-Add this to web/wp-includes/pluggable.php at the bottom of wp_mail()
-		\ace\helpers\Ses::send(array(
-			'to' => $to,
-			'from' => $phpmailer->From,
-			//'reply_to' => 'support@acquiremint.com',
-			//'bcc' => 'acquiremint-notifs@beachmint.com',
-			'subject' => $phpmailer->Subject,
-			'message' => $phpmailer->Body,
-			'type' => 'html',
-		));
-
-		then verify wordpress@markthegonzales.com in amazon ses
 
 
 
