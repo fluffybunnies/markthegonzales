@@ -14,6 +14,12 @@ chown -R www-data $dir/web/wp-content
 
 #chown -R www-data $dir/web/wp-admin/includes/file.php
 
-# this works: chown -R www-data /var/www/markthegonzales/web/wp-admin/*
-# this doesnt: chown -R www-data /var/www/markthegonzales/web/wp-admin
-# reset: rm -fr /var/www/markthegonzales/web/wp-content/plugins/mailchimp-for-wp && chown -R root /var/www/markthegonzales/
+# this works:
+# chown -R www-data /var/www/markthegonzales/web/wp-admin/*
+
+# this doesnt:
+# chown -R www-data /var/www/markthegonzales/web/wp-admin
+# chown www-data /var/www/markthegonzales/web/wp-admin/*
+
+# reset:
+# rm -fr /var/www/markthegonzales/web/wp-content/plugins/mailchimp-for-wp && chown -R root /var/www/markthegonzales/
