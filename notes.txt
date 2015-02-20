@@ -40,7 +40,7 @@ Add index to wp_options.autoload
 
 Protect wp-login
 		use \ace\helpers\Protect;
-		Protect::preventBruteForce(1, true); // 1 call per second
+		Protect::preventBruteForce(4, 4, true); // cap 4 calls over 4 seconds
 
 Review settings in wp-admin and make appropriate updates
 
