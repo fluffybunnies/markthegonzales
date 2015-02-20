@@ -7,8 +7,6 @@
 	- or upgrading WP entirely
 	- also find out what wp_options.autoload does
 		- select * from wp_options where option_name in ('siteurl','home')
-- fix infinite redirect on http://www.markthegonzales.com/wp-admin
-	- backup: http://www.markthegonzales.com/wp-admin/index.php
 - add logrotate.sh to sire/_common/_bin (or just sire/bin, though these should be merged)
 	- pass it the location of a script to run prior to log deletion
 		- in the for loop, check if arg.indexOf('deleteHook=') == 0
@@ -22,6 +20,9 @@
 --- Initial Installation ---
 
 Run /wp-admin/install.php in browser
+
+Add index to wp_options.autoload
+		alter table wp_options add index autoload_(autoload);
 
 Review settings in wp-admin and make appropriate updates
 

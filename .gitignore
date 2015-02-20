@@ -8,4 +8,8 @@ web/wp-content/uploads*
 web/wp-content/tmp_uploads*
 config.local.php
 config.local.json
+out/*
+web/public-out/*
+web/ace.js
+web/ace.css
 !.g

@@ -8,6 +8,13 @@
  * @package WordPress
  */
 
+require_once dirname(__FILE__).'/bootshell.php';
+use \ace\helpers\Protect;
+Protect::preventTooMany(array(
+	'cap' => 1000, // 1 call per second
+	'bank' => 50,
+));
+
 /** Make sure that the WordPress bootstrap has run before continuing. */
 require( dirname(__FILE__) . '/wp-load.php' );
 
