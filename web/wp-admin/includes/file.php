@@ -916,10 +916,7 @@ function get_filesystem_method( $args = array(), $context = false, $allow_relaxe
 
 		$temp_file_name = $context . 'temp-write-test-' . time();
 		$temp_handle = @fopen($temp_file_name, 'w');
-var_dump(func_get_args());
-var_dump($temp_file_name);
-var_dump($temp_handle);
-exit;
+
 		if ( $temp_handle ) {
 
 			// Attempt to determine the file owner of the WordPress files, and that of newly created files
@@ -928,7 +925,11 @@ exit;
 				$wp_file_owner = @fileowner( __FILE__ );
 				$temp_file_owner = @fileowner( $temp_file_name );
 			}
-
+var_dump(func_get_args());
+var_dump($temp_file_name);
+var_dump($wp_file_owner);
+var_dump($temp_file_owner);
+exit;
 			if ( $wp_file_owner !== false && $wp_file_owner === $temp_file_owner ) {
 				// WordPress is creating files as the same owner as the WordPress files, 
 				// this means it's safe to modify & create new files via PHP.
