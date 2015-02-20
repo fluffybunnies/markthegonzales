@@ -17,7 +17,7 @@ class Protect extends HelperAbstract {
 			'bank' => 50,
 			'usePath' => true,
 		),$opts);
-		$key = $opts['usePath'] ? REQUEST_PATH : $_SERVER['REQUEST_URI'];
+		$key = md5($opts['usePath'] ? REQUEST_PATH : $_SERVER['REQUEST_URI']);
 		$fn = REPOROOT."/out/protect.preventBruteForce.$key";
 		if (is_file($fn)) {
 			$log = json_decode(file_get_contents($fn), true);
