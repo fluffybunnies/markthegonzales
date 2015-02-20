@@ -19,6 +19,20 @@
 
 --- Initial Installation ---
 
+Edit wp-config.php to use Ace
+		require_once dirname(__FILE__).'/bootshell.php';
+		use \ace\Ace;
+		define('DB_NAME', Ace::getConfig('DB_NAME'));
+		define('DB_USER', Ace::getConfig('DB_USER'));
+		define('DB_PASSWORD', Ace::getConfig('DB_PASSWORD'));
+		if (Ace::getConfig('DB_PORT'))
+			define('DB_HOST', Ace::getConfig('DB_HOST').':'.Ace::getConfig('DB_PORT'));
+		else
+			define('DB_HOST', Ace::getConfig('DB_HOST'));
+		define('DB_CHARSET', 'utf8');
+		define('WP_HOME', 'http://'.$_SERVER['HTTP_HOST']);
+		define('WP_SITEURL', 'http://'.$_SERVER['HTTP_HOST']);
+
 Run /wp-admin/install.php in browser
 
 Add index to wp_options.autoload

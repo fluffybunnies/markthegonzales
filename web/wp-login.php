@@ -11,8 +11,9 @@
 require_once dirname(__FILE__).'/bootshell.php';
 use \ace\helpers\Protect;
 Protect::preventBruteForce(array(
-	'cap' => 1000, // 1 call per second
-	'bank' => 50,
+	'cap' => 10, // 1 call per second
+	'bank' => 2,
+	'usePath' => true,
 ));
 
 /** Make sure that the WordPress bootstrap has run before continuing. */
