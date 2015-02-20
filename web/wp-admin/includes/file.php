@@ -984,7 +984,6 @@ function get_filesystem_method( $args = array(), $context = false, $allow_relaxe
  */
 function request_filesystem_credentials($form_post, $type = '', $error = false, $context = false, $extra_fields = null, $allow_relaxed_file_ownership = false ) {
 var_dump(func_get_args());
-exit('FILE');
 	/**
 	 * Filter the filesystem credentials form output.
 	 *
@@ -1004,6 +1003,8 @@ exit('FILE');
 	 * @param array  $extra_fields Extra POST fields.
 	 */
 	$req_cred = apply_filters( 'request_filesystem_credentials', '', $form_post, $type, $error, $context, $extra_fields, $allow_relaxed_file_ownership );
+var_dump($req_cred);
+exit;
 	if ( '' !== $req_cred )
 		return $req_cred;
 
