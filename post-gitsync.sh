@@ -8,4 +8,4 @@ chown -R www-data $dir/web/wp-content/uploads
 chown -R www-data $dir/web/wp-content/tmp_uploads
 chown -R www-data $dir/web/wp-content/plugins
 # whyyy????...
-chown -R www-data $dir/web/wp-admin/includes
+chown -R www-data $dir/web/wp-admin/includes/file.php
