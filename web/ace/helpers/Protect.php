@@ -23,7 +23,7 @@ class Protect extends HelperAbstract {
 			if (is_file($fn)) {
 				$log = json_decode(file_get_contents($fn), true);
 				if (!is_array($log))
-					throw new \Exception('unexpected format');
+					throw new \Exception('corrupted log file; decode');
 			} else {
 				$log = array();
 			}
@@ -36,7 +36,7 @@ class Protect extends HelperAbstract {
 			if (!empty($log)) {
 				$lastCall = end($log);
 				if (!is_array($lastCall) || !is_numeric(Ace::g($lastCall,'t')))
-					throw new \Exception('corrupted log file');
+					throw new \Exception('corrupted log file; item');
 				if ($call['t'] < $lastCall['t']+$opts['cap'])
 					$call['s'] = 0;
 			}
