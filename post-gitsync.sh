@@ -11,6 +11,7 @@ chown -R www-data $dir/web/wp-content/tmp_uploads
 chown -R www-data $dir/web/wp-content/plugins
 # why do i need these...? grrr
 chown -R www-data $dir/web/wp-content
+chown www-data $dir/web/wp-admin/includes/file.php # wp compares owner of this file to a newly created one in get_filesystem_method()
 #chown -R www-data $dir/web/wp-admin/*
 
 
