@@ -45,7 +45,13 @@ Protect wp-login
 Review settings in wp-admin and make appropriate updates
 
 back up sql
-/usr/local/bin/node /root/sire/_common/s3dl/bin/baksql.js -d markthegonzales -b sire-markthegonzales/sql
+		/usr/local/bin/node /root/sire/_common/s3dl/bin/baksql.js -d markthegonzales -b sire-markthegonzales/sql
+
+Disable plugins/core-update/themes
+		./web/wp-admin//plugins.php
+		./web/wp-admin//theme-install.php
+		./web/wp-admin//update-core.php
+		./web/wp-admin//upgrade.php
 
 Set up google analytics and webmaster tools
 

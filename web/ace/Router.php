@@ -12,6 +12,8 @@ class Router {
 		'/test' => 'test.php',
 		'/ace.js' => 'ace/scripts/compile-ace.php',
 		'/ace.css' => 'ace/scripts/compile-ace.php',
+	);
+	private static $redirects = array(
 		'/wp-admin' => 'wp-admin/index.php',
 	);
 	private static $apiPath = '/ace/api';
@@ -27,11 +29,20 @@ class Router {
 		if ($r !== null)
 			self::go($r);
 
+		$r = Ace::g(self::$redirects, $request);
+		if ($r !== null)
+			self::redirect($r);
+
 	}
 
 	private static function go($where){
 		include WEBROOT.'/'.$where;
 		exit;
+	}
+
+	private static function redirect($where){
+		header('HTTP/1.1 301 Moved Permanently');
+		header("Location: $url");
 	}
 
 }
