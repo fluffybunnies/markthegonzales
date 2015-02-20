@@ -727,9 +727,9 @@ class Plugin_Upgrader extends WP_Upgrader {
 
 		$this->init();
 		$this->install_strings();
-exit('10');
-		add_filter('upgrader_source_selection', array($this, 'check_package') );
 
+		add_filter('upgrader_source_selection', array($this, 'check_package') );
+exit('11');
 		$this->run( array(
 			'package' => $package,
 			'destination' => WP_PLUGIN_DIR,
