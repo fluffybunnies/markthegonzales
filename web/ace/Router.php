@@ -25,13 +25,12 @@ class Router {
 			exit;
 		}
 
-		$r = Ace::g(self::$routes, $request);
-		if ($r !== null)
-			self::go($r);
+		if (isset(self::$routes[$request]))
+			self::go(self::$routes[$request]);
 
 		$r = Ace::g(self::$redirects, $request);
-		if ($r !== null)
-			self::redirect($r);
+		if (isset(self::$redirects[$request]))
+			self::redirect(self::$redirects[$request]);
 
 	}
 
