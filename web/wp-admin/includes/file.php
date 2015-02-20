@@ -915,10 +915,11 @@ function get_filesystem_method( $args = array(), $context = false, $allow_relaxe
 	if ( ! $method ) {
 
 		$temp_file_name = $context . 'temp-write-test-' . time();
+		$temp_handle = @fopen($temp_file_name, 'w');
 var_dump(func_get_args());
 var_dump($temp_file_name);
+var_dump($temp_handle);
 exit;
-		$temp_handle = @fopen($temp_file_name, 'w');
 		if ( $temp_handle ) {
 
 			// Attempt to determine the file owner of the WordPress files, and that of newly created files
