@@ -28,7 +28,6 @@ class Router {
 		if (isset(self::$routes[$request]))
 			self::go(self::$routes[$request]);
 
-		$r = Ace::g(self::$redirects, $request);
 		if (isset(self::$redirects[$request]))
 			self::redirect(self::$redirects[$request]);
 
