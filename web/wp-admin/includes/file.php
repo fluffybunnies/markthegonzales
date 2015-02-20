@@ -905,14 +905,12 @@ function get_filesystem_method( $args = array(), $context = false, $allow_relaxe
 	}
 
 	// If the directory doesn't exist (wp-content/languages) then use the parent directory as we'll create it.
-var_dump(WP_LANG_DIR);
-var_dump($context);
-var_dump(is_dir($context));
-exit;
+
 	if ( WP_LANG_DIR == $context && ! is_dir( $context ) ) {
 		$context = dirname( $context );
 	}
-
+var_dump(func_get_args());
+exit;
 	$context = trailingslashit( $context );
 
 	if ( ! $method ) {
