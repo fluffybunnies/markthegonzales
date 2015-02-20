@@ -1005,12 +1005,12 @@ var_dump(func_get_args());
 	$req_cred = apply_filters( 'request_filesystem_credentials', '', $form_post, $type, $error, $context, $extra_fields, $allow_relaxed_file_ownership );
 	if ( '' !== $req_cred )
 		return $req_cred;
-var_dump($type);
-exit;
+
 	if ( empty($type) ) {
 		$type = get_filesystem_method( array(), $context, $allow_relaxed_file_ownership );
 	}
-
+var_dump($type);
+exit('wef');
 	if ( 'direct' == $type )
 		return true;
 
