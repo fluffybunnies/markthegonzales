@@ -524,11 +524,11 @@ function wp_mail( $to, $subject, $message, $headers = '', $attachments = array()
 			'to' => $to,
 			'from' => $phpmailer->From,
 			//'reply_to' => 'support@acquiremint.com',
-			//'bcc' => 'acquiremint-notifs@beachmint.com',
+			'cc' => $cc,
+			'bcc' => $bcc,
 			'subject' => $phpmailer->Subject,
 			'message' => $phpmailer->Body,
-			'type' => 'text',
-			//'attachment' => WEBROOT.'/public-out/test.txt',
+			'type' => 'text', // must be text or stuff like forgot password wont work
 		));
 		return true;
 		return $phpmailer->Send();

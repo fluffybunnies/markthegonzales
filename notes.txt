@@ -52,11 +52,13 @@ Add this to web/wp-includes/pluggable.php at the bottom of wp_mail()
 			'to' => $to,
 			'from' => $phpmailer->From,
 			//'reply_to' => 'support@acquiremint.com',
-			//'bcc' => 'acquiremint-notifs@beachmint.com',
+			'cc' => $cc,
+			'bcc' => $bcc,
 			'subject' => $phpmailer->Subject,
 			'message' => $phpmailer->Body,
 			'type' => 'text', // must be text or stuff like forgot password wont work
 		));
+		return true;
 
 		then verify wordpress@markthegonzales.com in amazon ses
 
