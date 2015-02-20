@@ -6,9 +6,9 @@ echo "post-gitsync.sh $dir $branch"
 
 chown www-data $dir/web/public-out
 
-#chown -R www-data $dir/web/wp-content/uploads
-#chown -R www-data $dir/web/wp-content/tmp_uploads
-#chown -R www-data $dir/web/wp-content/plugins
+chown -R www-data $dir/web/wp-content/uploads
+chown -R www-data $dir/web/wp-content/tmp_uploads
+chown -R www-data $dir/web/wp-content/plugins
 chown www-data $dir/web/wp-content # let wp create a test file in this dir
 chown www-data $dir/web/wp-admin/includes/file.php # wp compares owner of this file to a newly created one in get_filesystem_method()
 #chown -R www-data $dir/web/wp-admin/*
