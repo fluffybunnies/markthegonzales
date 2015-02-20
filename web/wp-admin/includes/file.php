@@ -1003,11 +1003,10 @@ var_dump(func_get_args());
 	 * @param array  $extra_fields Extra POST fields.
 	 */
 	$req_cred = apply_filters( 'request_filesystem_credentials', '', $form_post, $type, $error, $context, $extra_fields, $allow_relaxed_file_ownership );
-var_dump($req_cred);
-exit;
 	if ( '' !== $req_cred )
 		return $req_cred;
-
+var_dump($type);
+exit;
 	if ( empty($type) ) {
 		$type = get_filesystem_method( array(), $context, $allow_relaxed_file_ownership );
 	}
