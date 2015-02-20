@@ -7,19 +7,27 @@ echo "post-gitsync.sh $dir $branch"
 chown -R www-data $dir/web/wp-content/uploads
 chown -R www-data $dir/web/wp-content/tmp_uploads
 chown -R www-data $dir/web/wp-content/plugins
-# why?
+# why do i need these...? grrr
 chown -R www-data $dir/web/wp-content
-#chown -R www-data $dir/web/wp-admin
-#chown -R www-data $dir/web/wp-includes
+chown -R www-data /var/www/markthegonzales/web/wp-admin/*
 
-#chown -R www-data $dir/web/wp-admin/includes/file.php
 
 # this works:
 # chown -R www-data /var/www/markthegonzales/web/wp-admin/*
 
+# this works:
+# 
+
 # this doesnt:
-# chown -R www-data /var/www/markthegonzales/web/wp-admin
 # chown www-data /var/www/markthegonzales/web/wp-admin/*
+# chown -R www-data /var/www/markthegonzales/web/wp-admin
+# chown www-data /var/www/markthegonzales/web/wp-admin
+# find /var/www/markthegonzales/web/wp-admin/ | xargs chown www-data
+# find /var/www/markthegonzales/web/wp-admin -type d | xargs chown www-data
+# chown -R www-data /var/www/markthegonzales/web/wp-admin/* && chown -R root user && chown -R root network && chown -R root maint && chown -R root js && chown -R root includes && chown -R root images && chown -R root css
+# chown -R www-data /var/www/markthegonzales/web/wp-admin/* && find /var/www/markthegonzales/web/wp-admin/ | xargs chown -R root
+# chown -R www-data /var/www/markthegonzales/web/wp-admin/* && chown root /var/www/markthegonzales/web/wp-admin/*
+# chown -R www-data user && chown -R www-data network && chown -R www-data maint && chown -R www-data js && chown -R www-data includes && chown -R www-data images && chown -R www-data css
 
 # reset:
-# rm -fr /var/www/markthegonzales/web/wp-content/plugins/mailchimp-for-wp && chown -R root /var/www/markthegonzales/
+# rm -fr /var/www/markthegonzales/web/wp-content/plugins/mailchimp-for-wp && chown -R root /var/www/markthegonzales/ && /root/sire/_common/gitsync.sh '/var/www/markthegonzales' 'master'
