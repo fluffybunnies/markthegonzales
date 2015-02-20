@@ -151,6 +151,7 @@ class WP_Upgrader {
 	 */
 	public function fs_connect( $directories = array(), $allow_relaxed_file_ownership = false ) {
 		global $wp_filesystem;
+		echo "wef";
 var_dump($directories[0]);
 var_dump($allow_relaxed_file_ownership);
 var_dump($this->skin->request_filesystem_credentials( false, $directories[0], $allow_relaxed_file_ownership ));
