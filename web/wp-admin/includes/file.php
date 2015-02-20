@@ -905,6 +905,10 @@ function get_filesystem_method( $args = array(), $context = false, $allow_relaxe
 	}
 
 	// If the directory doesn't exist (wp-content/languages) then use the parent directory as we'll create it.
+var_dump(WP_LANG_DIR);
+var_dump($context);
+var_dump(is_dir($context));
+exit;
 	if ( WP_LANG_DIR == $context && ! is_dir( $context ) ) {
 		$context = dirname( $context );
 	}
@@ -983,7 +987,7 @@ function get_filesystem_method( $args = array(), $context = false, $allow_relaxe
  * @return boolean False on failure. True on success.
  */
 function request_filesystem_credentials($form_post, $type = '', $error = false, $context = false, $extra_fields = null, $allow_relaxed_file_ownership = false ) {
-var_dump(func_get_args());
+
 	/**
 	 * Filter the filesystem credentials form output.
 	 *
@@ -1009,8 +1013,7 @@ var_dump(func_get_args());
 	if ( empty($type) ) {
 		$type = get_filesystem_method( array(), $context, $allow_relaxed_file_ownership );
 	}
-var_dump($type);
-exit('wef');
+
 	if ( 'direct' == $type )
 		return true;
 
