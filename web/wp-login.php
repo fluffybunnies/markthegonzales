@@ -10,10 +10,7 @@
 
 require_once dirname(__FILE__).'/bootshell.php';
 use \ace\helpers\Protect;
-Protect::preventBruteForce(array(
-	'cap' => 1, // 1 call per second
-	'usePath' => true,
-));
+Protect::preventBruteForce(1, true); // 1 call per second
 
 /** Make sure that the WordPress bootstrap has run before continuing. */
 require( dirname(__FILE__) . '/wp-load.php' );
