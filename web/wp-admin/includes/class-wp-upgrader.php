@@ -742,6 +742,7 @@ class Plugin_Upgrader extends WP_Upgrader {
 		) );
 
 		remove_filter('upgrader_source_selection', array($this, 'check_package') );
+var_dump($this);
 echo "\n\n".json_encode($this)."\n\n";exit;
 		if ( ! $this->result || is_wp_error($this->result) )
 			return $this->result;
