@@ -4,7 +4,7 @@ branch=$2
 
 echo "post-gitsync.sh $dir $branch"
 
-chown www-data $dir/web/public-out
+chown -R www-data $dir/web/public-out
 
 #chown -R www-data $dir/web/wp-content/uploads
 #chown -R www-data $dir/web/wp-content/tmp_uploads
