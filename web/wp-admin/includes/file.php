@@ -909,10 +909,11 @@ function get_filesystem_method( $args = array(), $context = false, $allow_relaxe
 	if ( WP_LANG_DIR == $context && ! is_dir( $context ) ) {
 		$context = dirname( $context );
 	}
-var_dump(func_get_args());
-exit;
-	$context = trailingslashit( $context );
 
+	$context = trailingslashit( $context );
+var_dump(func_get_args());
+var_dump($method);
+exit;
 	if ( ! $method ) {
 
 		$temp_file_name = $context . 'temp-write-test-' . time();
