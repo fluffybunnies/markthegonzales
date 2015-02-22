@@ -140,7 +140,12 @@ div.ace-smile {
 
 	<div class="instagram-container">
 		<script type="text/ace-instagram">{
-			query: 'users/227962011/media/recent'
+			query: 'users/%userId%/media/recent'
+			,fetch: {
+				userId: ['users/search?q=markthegonzales',function(res){
+					return res.data[0].id;
+				}]
+			}
 		}</script>
 	</div>
 
