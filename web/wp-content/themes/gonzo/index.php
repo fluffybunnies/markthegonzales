@@ -18,6 +18,11 @@ if ( function_exists('shareit_output') ) {
 	
 	<?php get_template_part( 'loop', $omc_default_blog_style ); ?>
 
+	<div class="clear">&nbsp;</div>
+	<script type="text/ace-instagram">{
+		query: 'users/25278614/media/recent'
+	}</script>
+
 </section><!-- /omc-main -->
 
 <?php get_sidebar(); ?>
