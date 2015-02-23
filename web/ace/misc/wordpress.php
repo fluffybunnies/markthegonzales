@@ -17,7 +17,7 @@ function hook_wphead(){
 }
 
 function hook_wpfooter(){
-	echo '<script>if (!window.$ && window.jQuery) window.$ = window.jQuery;</script>';
+	echo '<script>if (!window.$) window.$ = window.jQuery;</script>';
 	echo '<script src="/ace.js" async></script>';
 	Tracking::pageView();
 }
