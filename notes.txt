@@ -2,12 +2,8 @@
 --- To Do ---
 
 52.1.131.33
-- add logrotate.sh to sire/_common/_bin (or just sire/bin, though these should be merged)
-	- pass it the location of a script to run prior to log deletion
-		- in the for loop, check if arg.indexOf('deleteHook=') == 0
-	- rotate nginx (and other) logs on sire/mark deploy script
-	- see if other logs in other repos on same server need rotating
-		- they do
+- log hack attempts
+	- make a log helper class
 - see if node version of compile_ace.php is faster
 	- check happiness
 

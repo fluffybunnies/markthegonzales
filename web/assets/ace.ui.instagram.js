@@ -1,7 +1,16 @@
 /*
 
 <script type="text/ace-instagram">{
-	query: 'users/227962011/media/recent'
+	query: 'users/25278614/media/recent'
+}</script>
+
+<script type="text/ace-instagram">{
+	query: 'users/%userId%/media/recent'
+	,fetch: {
+		userId: ['users/search?q=markthegonzales',function(res){
+			return res.data[0].id;
+		}]
+	}
 }</script>
 
 */

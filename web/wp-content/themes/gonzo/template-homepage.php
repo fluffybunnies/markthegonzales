@@ -27,7 +27,12 @@ Template Name: Homepage
 	<?php endwhile; endif; ?>	
 	
 	<br class="clear" />
-	
+
+	<script type="text/ace-instagram">{
+		query: 'users/25278614/media/recent'
+	}</script>
+	<br class="clear" />
+
 </section><!-- /main -->
 
 <?php get_sidebar(); ?>
