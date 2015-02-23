@@ -14,5 +14,9 @@
 	overflow: hidden;
 }
 
+article.omc-blog-two {
+	margin-bottom: 60px;
+}
+
 /* END theme overrides */
 
