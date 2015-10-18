@@ -1,0 +1,1679 @@
+/*------------------------------------------------------------------
+Nietzsche Edge Skin
+Version: 1;
+Author: ThemeMountain
+Copyright: ThemeMountain
+
+[Table of contents]
+
+1. Typography
+2. Background Color Classes
+3. Header & Navigation
+4. Slider & Parallax
+5. Lightbox
+6. Plugin Preloader
+7. Rollovers
+8. Homepage
+9. About Pages
+10. Contact Pages
+11. Project Pages
+12. Fullscreen Pages
+13. Blog Pages
+14. Resolution Media Queries
+15. Form Elements
+16. Social Lists
+17. Footer
+18. Media Element Player
+19. Helper Classes
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[1. Typography]
+*/
+
+.skin-edge,
+.skin-edge h1,
+.skin-edge h2,
+.skin-edge h3,
+.skin-edge h4,
+.skin-edge h5,
+.skin-edge h6,
+.skin-edge .navigation ul li a,
+.skin-edge .overlay-navigation ul li a {
+	font-family: 'Lato', 'Helvetica Neue', Arial, serif;
+}
+.skin-edge .font-alt-2 {
+	font-family: 'Crimson Text', serif;
+}
+.skin-edge .counter {
+	font-family: 'Helvetica Neue', Arial, serif;
+}
+/* Headings and Links */
+
+.skin-edge a,
+.skin-edge p a,
+.skin-edge .box a:not(.button) {
+	color: #bb9b69;
+}
+.skin-edge a:hover,
+.skin-edge p a:hover,
+.skin-edge .box a:not(.button):hover {
+	color: #333;
+	text-decoration: none;
+}
+.skin-edge h1,
+.skin-edge h1 a,
+.skin-edge h2,
+.skin-edge h2 a,
+.skin-edge h3,
+.skin-edge h3 a,
+.skin-edge h4,
+.skin-edge h4 a,
+.skin-edge h5,
+.skin-edge h5 a,
+.skin-edge h6,
+.skin-edge h6 a {
+	color: #333;
+	letter-spacing: 0.1rem;
+}
+.skin-edge h1 a:hover,
+.skin-edge h2 a:hover,
+.skin-edge h3 a:hover,
+.skin-edge h4 a:hover,
+.skin-edge h5 a:hover,
+.skin-edge h6 a:hover {
+	color: #bb9b69;
+}
+.skin-edge h1 {
+	font-size: 3.8rem;
+}
+.skin-edge h2 {
+	font-size: 2.8rem;
+}
+.skin-edge h3 {
+	font-size: 2.2rem;
+}
+.skin-edge h3.widget-title {
+	font-size: 1.8rem;
+}
+.skin-edge h4 {
+	font-size: 1.6rem;
+}
+.skin-edge h5 {
+	font-size: 1.5rem;
+}
+.skin-edge h6 {
+	font-size: 1.4rem;
+}
+.skin-edge p {
+	font-weight: 200;
+	font-size: 1.4rem;
+	line-height: 1.8;
+}
+.skin-edge [class*="hero-"] p,
+.skin-edge .lead {
+	font-size: 1.9rem;
+}
+.skin-edge .blog-masonry .grid-item h2 {
+	font-size: 2.2rem;
+	margin-bottom: 0.6rem;
+}
+/*------------------------------------------------------------------
+[2. Background Color Classes]
+*/
+
+.skin-edge .bkg-charcoal {
+	background-color: #333;
+	border-color: #333;
+}
+.skin-edge .bkg-hover-charcoal:hover {
+	background-color: #000;
+	border-color: #000;
+}
+/*------------------------------------------------------------------
+[3. Header & Navigation]
+*/
+
+.skin-edge .header .logo {
+	width: 12rem;
+	padding-bottom: 0;
+}
+.skin-edge .header-1 .header-inner {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.skin-edge .header .navigation > ul > li > a {
+	padding-bottom: 0.4rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.2rem;
+}
+.skin-edge .header-1 .navigation > ul > li > a,
+.skin-edge .header-1 .navigation-show a,
+.skin-edge .header-4 .navigation > ul > li > a,
+.skin-edge .header-4 .navigation-show a {
+	color: #fff;
+}
+.skin-edge .nav-dark .navigation > ul > li > a,
+.skin-edge .nav-dark .navigation-show a {
+	color: #333;
+}
+/* Overlay Navigation Colors */
+
+.skin-edge .overlay-navigation-wrapper {
+	background: rgba(0, 0, 0, 0.85);
+}
+.skin-edge .overlay-navigation > ul > li > a {
+	font-size: 2rem;
+	line-height: 1.2;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+}
+.skin-edge .overlay-navigation .sub-menu a {
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+}
+.skin-edge .overlay-navigation .sub-menu li:first-child {
+	padding-top: 0.5rem;
+}
+.skin-edge .overlay-navigation .sub-menu li:last-child {
+	padding-bottom: 1rem;
+}
+.skin-edge .overlay-navigation-footer {
+	color: #666;
+}
+/* Navigation - Active Colors */
+
+.skin-edge .header .navigation > ul > li > a {
+	margin: 0 1.5rem;
+	padding-left: 0;
+	padding-right: 0;
+}
+.skin-edge .overlay-navigation ul li.current > a {
+	color: #fff;
+}
+.skin-edge .overlay-navigation .sub-menu {
+	border-top: 1px solid transparent;
+}
+.skin-edge .overlay-navigation .sub-menu.open {
+	border-top: 1px solid #555;
+}
+.skin-edge .header .navigation > ul > li.current > a {
+	padding-bottom: 0.2rem;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+.skin-edge .nav-dark .navigation > ul > li.current > a {
+	color: #333;
+	border-bottom: 1px solid #333;
+}
+/* Navigation - Hover Colors */
+
+.skin-edge .header a:hover.navigation-show a:hover,
+.skin-edge .header .navigation > ul > li > a:hover,
+.skin-edge .header .overlay-navigation > ul > li > a:hover {
+	color: #fff;
+	opacity: 0.6;
+}
+.skin-edge .nav-dark .navigation-show a:hover,
+.skin-edge .nav-dark .navigation > ul > li > a:hover {
+	color: #333;
+	opacity: 0.6;
+}
+/* Header Background on Scroll Color */
+
+.skin-edge .header-type-top .navigation-show a,
+.skin-edge .header-type-top .navigation > ul > li > a,
+.skin-edge .header-type-top .overlay-navigation > ul > li > a,
+.skin-edge .header-type-top-large .navigation-show a,
+.skin-edge .header-type-top-large .navigation > ul > li > a,
+.skin-edge .header-type-top-large .overlay-navigation > ul > li > a,
+.skin-edge .header-background .navigation-show a,
+.skin-edge .header-background .navigation > ul > li > a,
+.skin-edge .header-background .overlay-navigation > ul > li > a {
+	color: #666;
+}
+.skin-edge .header-2.header-sticky .navigation > ul > li.current > a,
+.skin-edge .header-type-top .navigation > ul > li.current > a,
+.skin-edge .header-type-top-large .navigation > ul > li.current > a,
+.skin-edge .header-background .navigation > ul > li.current > a {
+	color: #fff;
+	border-bottom: none;
+}
+.skin-edge .header-type-top .navigation-show a:hover,
+.skin-edge .header-type-top .navigation > ul > li > a:hover,
+.skin-edge .header-type-top .overlay-navigation > ul > li > a:hover,
+.skin-edge .nav-dark .header-type-top .navigation-show a:hover,
+.skin-edge .nav-dark .header-type-top .navigation > ul > li > a:hover,
+.skin-edge .header-type-top-large .navigation-show a:hover,
+.skin-edge .header-type-top-large .navigation > ul > li > a:hover,
+.skin-edge .header-type-top-large .overlay-navigation > ul > li > a:hover,
+.skin-edge .nav-dark .header-type-top-large .navigation-show a:hover,
+.skin-edge .nav-dark .header-type-top-large .navigation > ul > li > a:hover,
+.skin-edge .header-background .navigation-show a:hover,
+.skin-edge .header-background .navigation > ul > li > a:hover,
+.skin-edge .header-background .overlay-navigation > ul > li > a:hover,
+.skin-edge .nav-dark .header-background .navigation-show a:hover,
+.skin-edge .nav-dark .header-background .navigation > ul > li > a:hover {
+	color: #fff;
+	opacity: 1;
+}
+.skin-edge .overlay-navigation-footer .social-list a {
+	color: #999;
+}
+/* Header mobile & breakpoint colors */
+
+@media only screen and (max-width: 960px) {
+	.skin-edge .header,
+	.skin-edge .header .header-inner {
+		background: #232323;
+	}
+	.skin-edge .header-inner .navigation-show a {
+		color: #666;
+	}
+	.skin-edge .header-inner .navigation-show a:hover {
+		color: #fff;
+		opacity: 1;
+	}
+}
+/*------------------------------------------------------------------
+[4. Slider & Parallax]
+*/
+
+.skin-edge .featured-media .tms-pagination {
+	display: none !important;
+}
+.skin-edge .full-width-slider,
+.skin-edge .parallax.fixed-height {
+	height: 100vh;
+}
+.skin-edge .mobile .full-width-slider,
+.skin-edge .mobile .parallax.fixed-height {
+	height: 50rem;
+}
+/*------------------------------------------------------------------
+[5. Lightbox]
+*/
+
+.skin-edge .tm-lightbox {
+	background: rgba(0, 0, 0, 0.85);
+}
+.skin-edge #tml-caption span {
+	border: none;
+}
+.skin-edge #tml-caption {
+	font-style: normal;
+	font-weight: 200;
+	letter-spacing: 0.1rem;
+	color: #fff;
+}
+.skin-edge .tml-nav {
+	color: #fff;
+}
+/*------------------------------------------------------------------
+[6. Plugin Preloader]
+*/
+
+.skin-edge .tm-loader #circle {
+	width: 2rem;
+	height: 2rem;
+	background: none;
+	border: 3px solid rgba(255, 255, 255, 0.5);
+}
+/*------------------------------------------------------------------
+[7. Rollovers]
+*/
+
+.skin-edge .overlay-info > span > span {
+	text-align: left;
+	vertical-align: bottom;
+}
+.skin-edge .overlay-info .project-number {
+	font-size: 2rem;
+	color: #fff;
+	font-weight: 200;
+}
+.skin-edge .overlay-info .project-title {
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.skin-edge .overlay-info .project-description {
+	font-size: 1.4rem;
+	font-weight: 200;
+}
+/*------------------------------------------------------------------
+[8. Homepage]
+*/
+
+.skin-edge .portfolio-filter-menu a {
+	font-weight: bold;
+	color: #666;
+}
+.skin-edge .portfolio-filter-menu a:hover {
+	color: #333;
+}
+.skin-edge .portfolio-filter-menu a.active {
+	border-width: 1px;
+}
+.skin-edge .home-page [class*="portfolio-"] {
+	background: none;
+}
+/*------------------------------------------------------------------
+[9. About Pages]
+*/
+/* Team Section */
+
+.skin-edge .team-3 {
+	background: none;
+	color: #666;
+}
+.skin-edge .team-3 .team-content-info,
+.skin-edge .team-3 .social-list a {
+	color: #666;
+}
+.skin-edge .team-3 .team-content-info h5 {
+	color: #333;
+}
+.skin-edge .team-3 .tms-bullet-nav {
+	background: #333;
+}
+.skin-edge .team-3 .team-slider .tms-pagination {
+	text-align: left;
+}
+/* Hero Section */
+
+/*------------------------------------------------------------------
+[10. Contact Pages]
+*/
+/* Hero Sections */
+
+.skin-edge .hero-5-contact > .row:before {
+	background: #fff;
+}
+.skin-edge .hero-5-contact > .row:after,
+.skin-edge .hero-7-contact > .row:before {}
+/* Form Response */
+
+.skin-edge .contact-form-container .form-response {
+	color: #666;
+	position: absolute;
+	bottom: -2rem;
+}
+/* Contact Style 3 Breakpoint Colors */
+
+@media only screen and (max-width: 768px) {
+	.skin-edge .hero-5-contact {
+		color: #666;
+	}
+	.skin-edge .hero-5-contact h1,
+	.skin-edge .hero-5-contact h2,
+	.skin-edge .hero-5-contact h3,
+	.skin-edge .hero-5-contact h4,
+	.skin-edge .hero-5-contact h5,
+	.skin-edge .hero-5-contact h6 {
+		color: #333;
+	}
+	.skin-edge .hero-5-contact .hero-content-inner {
+		text-align: left;
+	}
+}
+/*------------------------------------------------------------------
+[11. Project Pages]
+*/
+/* Pagination */
+
+.pe-skin [class*="pagination-"] {
+	color: #666;
+	background-color: #f4f4f4;
+}
+.pe-skin [class*="pagination-"] a:hover {
+	color: #333;
+}
+/*------------------------------------------------------------------
+[12. Fullscreen Pages]
+*/
+
+.skin-edge .error-404 .background-image,
+.skin-edge .error-500 .background-image {
+}
+.skin-edge .coming-soon-1 .background-image {
+}
+.skin-edge .coming-soon-1 .logo {
+	width: 15rem;
+}
+.skin-edge .error-404 .search-form-container {
+	max-width: 50rem;
+}
+.skin-edge .error-404 .search-form-container .button {
+	width: auto;
+}
+.skin-edge .error-404 .form-search {
+	font-size: 1.7rem;
+	font-weight: 200;
+	text-align: center;
+}
+/*------------------------------------------------------------------
+[13. Blog Pages]
+*/
+
+.skin-edge .post-content.with-background {
+	background: #f4f4f4;
+}
+.skin-edge .post-info {
+	color: #999;
+}
+.skin-edge .post-media .mejs-container.mejs-audio .mejs-controls .mejs-play,
+.skin-edge .post-media .mejs-container.mejs-audio .mejs-controls .mejs-pause {
+	border-radius: 0;
+}
+.skin-edge .post-media .mejs-container.mejs-audio .mejs-controls {
+	border-radius: 0;
+}
+.skin-edge .pagination-1 .page-list a {
+	color: #999;
+}
+.skin-edge .pagination-1 .page-list a:hover,
+.skin-edge .pagination-1 .page-list .current {
+	color: #333;
+}
+.skin-edge .blog-masonry.full-width.small-margins {
+	padding-top: 1rem !important;
+}
+.skin-edge .blog-masonry.full-width.small-margins {
+	padding-bottom: 1rem !important;
+}
+.skin-edge aside .widget li {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+/*------------------------------------------------------------------
+[14. Resolution Media Queries]
+*/
+
+/*------------------------------------------------------------------
+[15. Form Elements]
+*/
+
+.skin-edge .form-element[class*="border-"] {
+	background: none;
+}
+.skin-edge input.form-element,
+.skin-edge textarea.form-element {
+	padding-left: 0;
+	padding-right: 0;
+	background: none;
+	color: #666;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 0.4rem solid #666;
+	border-radius: 0;
+}
+.skin-edge .form-element:focus,
+.skin-edge textarea:focus {
+	background: none;
+	color: #333;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 0.4rem solid #222;
+	box-shadow: none;
+}
+.skin-edge .form-element.required-field,
+.skin-edge textarea.required-field {
+	border-color: #bb9b69;
+}
+.skin-edge .form-element.required-field:focus,
+.skin-edge textarea.required-field:focus {
+	border-bottom: 0.4rem solid #222;
+}
+.skin-edge .fullscreen-section .form-element,
+.skin-edge .fullscreen-section textarea {
+	padding-left: 0;
+	padding-right: 0;
+	background: none;
+	color: #fff;
+	border-bottom: 0.4rem solid #fff;
+	border-radius: 0;
+}
+.skin-edge .fullscreen-section .form-element:focus,
+.skin-edge .fullscreen-section textarea:focus {
+	background: none;
+	color: #fff;
+	border-bottom: 0.4rem solid #fff;
+	box-shadow: none;
+}
+.skin-edge .fullscreen-section .form-element.required-field,
+.skin-edge .fullscreen-section textarea.required-field {
+	border-color: #bb9b69;
+}
+.skin-edge .fullscreen-section .form-element.required-field:focus,
+.skin-edge .fullscreen-section textarea.required-field:focus {
+	border-bottom: 0.4rem solid #fff;
+}
+/*------------------------------------------------------------------
+[16. Social Lists]
+*/
+
+.skin-edge .bkg-charcoal {
+	background-color: #333;
+	border-color: #333;
+}
+.skin-edge .bkg-hover-charcoal:hover {
+	background-color: #000;
+	border-color: #000;
+}
+.skin-edge .social-list li {
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.skin-edge .social-list,
+.skin-edge .social-list li a {
+	color: #999;
+}
+.skin-edge .social-list li a {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+.skin-edge .social-list li.social-list-label {
+	color: #333;
+}
+.skin-edge .social-list li a:hover {
+	color: #333;
+}
+.skin-edge .overlay-navigation-footer .social-list a,
+.skin-edge .footer-1 .social-list a,
+.skin-edge .fullscreen-section footer .social-list a {
+	margin-left: 0.8rem;
+	margin-right: 0.8rem;
+	font-size: 1.1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+}
+.skin-edge .social-list li:first-child a {
+	margin-left: 0;
+}
+.skin-edge .overlay-navigation-footer .social,
+.skin-edge .overlay-navigation-footer .social-list a {
+	color: #666;
+}
+.skin-edge .fullscreen-section .social-list,
+.skin-edge .fullscreen-section .social-list a {
+	color: #fff;
+}
+.skin-edge .fullscreen-section .social-list a {
+	opacity: 0.6;
+}
+.skin-edge .fullscreen-section .social-list a:hover {
+	color: #fff;
+	opacity: 1;
+}
+.skin-edge .footer-1 .social-list,
+.skin-edge .footer-1 .social-list a {
+	color: #555;
+}
+/*------------------------------------------------------------------
+[17. Footer]
+*/
+
+.skin-edge .footer {
+	color: #777;
+}
+.skin-edge .footer a {
+	color: #999;
+}
+.skin-edge .footer a:hover,
+.skin-edge .footer .social-list a:hover {
+	color: #fff;
+}
+.skin-edge .footer .footer-logo {
+	width: 5rem;
+}
+.skin-edge .footer .footer-bottom .copyright,
+.skin-edge .footer .footer-bottom .social-list {
+	float: none;
+}
+.skin-edge .footer h3 {
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #999;
+}
+.skin-edge .footer address {
+	font-size: 1.3rem;
+	line-height: 1.2;
+	font-style: normal;
+	font-weight: 200;
+}
+/*------------------------------------------------------------------
+[18. Media Element Player]
+*/
+
+.skin-edge .mejs-container.mejs-audio .mejs-controls {
+	border-radius: 3px;
+}
+.skin-edge .mejs-container .mejs-controls,
+.skin-edge .mejs-controls .mejs-volume-button .mejs-volume-slider {
+	background: rgba(255, 255, 255, 0.9);
+}
+.skin-edge .mejs-container.mejs-audio .mejs-controls {
+	background: #f9f9f9;
+}
+/* Time track, vol track */
+
+.skin-edge .mejs-controls .mejs-time-rail .mejs-time-loaded,
+.skin-edge .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.skin-edge .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
+	background: #999;
+}
+/* Time track, vol level track */
+
+.skin-edge .mejs-controls .mejs-time-rail .mejs-time-current,
+.skin-edge .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+.skin-edge .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
+	background: #666;
+}
+.skin-edge .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
+	background: #ffffff;
+}
+/* Tooltip */
+
+.skin-edge .mejs-controls .mejs-time-rail .mejs-time-float {
+	background: #000;
+}
+/* Play Button */
+
+.skin-edge .mejs-container.mejs-audio .mejs-controls .mejs-play,
+.skin-edge .mejs-container.mejs-audio .mejs-controls .mejs-pause {
+	background: #eee;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+/* Time */
+
+.skin-edge .mejs-container .mejs-controls .mejs-time span {
+	color: #666;
+}
+/*------------------------------------------------------------------
+[19. Helper Classes]
+*/
+
+.skin-edge .fullscreen-inner.v-align-bottom,
+.skin-edge .fullscreen-caption-content-inner.v-align-bottom,
+.skin-edge .tm-parallax-content-inner.v-align-bottom {
+	padding-bottom: 14rem;
+}
+@media only screen and (max-width: 768px) {
+	.fullscreen-section .background-on-mobile {
+		background: #f4f4f4;
+	}
+	.fullscreen-section .background-on-mobile * {
+		color: #666 !important;
+	}
+}
+/*------------------------------------------------------------------
+[20. Demo Misc]
+*/
+
+a.action-buy {
+	background-color: #000;
+	border-color: #000;
+	color: #fff;
+}
+a.action-buy:hover {
+	background-color: #bb9b69;
+	border-color: #bb9b69;
+}
+
+/*------------------------------------------------------------------
+Nietzsche Minimal Skin
+Version: 1;
+Author: ThemeMountain
+Copyright: ThemeMountain
+
+[Table of contents]
+
+1. Typography
+2. Background Color & Color Classes
+3. Header & Navigation
+4. Slider & Parallax
+5. Lightbox
+6. Plugin Preloader
+7. Rollovers
+8. Homepage
+9. About Pages
+10. Contact Pages
+11. Project Pages
+12. Fullscreen Pages
+13. Blog Pages
+14. Resolution Media Queries
+15. Form Elements
+16. Social Lists
+17. Footer
+18. Dividers
+19. Media Element Player
+-------------------------------------------------------------------*/
+/*------------------------------------------------------------------
+[1. Typography]
+*/
+
+.skin-minimal,
+.skin-minimal h1,
+.skin-minimal h2,
+.skin-minimal h3,
+.skin-minimal h4,
+.skin-minimal h5,
+.skin-minimal h6,
+.skin-minimal .navigation ul li a,
+.skin-minimal .side-navigation ul li a {
+	font-family: 'Lato', 'Helvetica Neue', Arial, serif;
+}
+.skin-minimal .lead,
+.skin-minimal .project-description,
+.skin-minimal .project-details,
+.skin-minimal [class*="pagination-"] small,
+.skin-minimal .post-info,
+.skin-minimal .single-post-tags,
+.skin-minimal .team-3 h6.occupation,
+.skin-minimal .team-4 h6.occupation,
+.skin-minimal .stats-2 .description,
+.skin-minimal .copyright,
+.skin-minimal .side-navigation-footer,
+.skin-minimal .comment-meta,
+.skin-minimal .sidebar a,
+.skin-minimal cite,
+.skin-minimal .font-alt-2 {
+	font-family: 'Lekton', serif;
+}
+.skin-minimal .counter {
+	font-family: 'Helvetica Neue', Arial, serif;
+}
+/* Headings and Links */
+
+.skin-minimal .skin-minimal a,
+.skin-minimal p a,
+.skin-minimal .box a:not(.button) {
+	color: #666;
+}
+.skin-minimal a:hover,
+.skin-minimal p a:hover,
+.skin-minimal .box a:not(.button):hover {
+	color: #fdeb74;
+	text-decoration: none;
+}
+.skin-minimal h1,
+.skin-minimal h1 a,
+.skin-minimal h2,
+.skin-minimal h2 a,
+.skin-minimal h3,
+.skin-minimal h3 a,
+.skin-minimal h4,
+.skin-minimal h4 a,
+.skin-minimal h5,
+.skin-minimal h5 a,
+.skin-minimal h6,
+.skin-minimal h6 a {
+	color: #333;
+	letter-spacing: 0.1rem;
+}
+.skin-minimal h1 a:hover,
+.skin-minimal h2 a:hover,
+.skin-minimal h3 a:hover,
+.skin-minimal h4 a:hover,
+.skin-minimal h5 a:hover,
+.skin-minimal h6 a:hover {
+	color: #fdeb74;
+}
+.skin-minimal h1 {
+	font-size: 2.4rem;
+}
+.skin-minimal h2 {
+	font-size: 2rem;
+}
+.skin-minimal h3 {
+	font-size: 1.7rem;
+}
+.skin-minimal h3.widget-title {
+	font-size: 1.7rem;
+}
+.skin-minimal h4 {
+	font-size: 1.5rem;
+}
+.skin-minimal h5 {
+	font-size: 1.4rem;
+}
+.skin-minimal h6 {
+	font-size: 1.2rem;
+}
+.skin-minimal p {
+	font-weight: 200;
+	font-size: 1.4rem;
+	line-height: 1.8;
+}
+.skin-minimal [class*="hero-"] p,
+.skin-minimal .lead {
+	font-size: 1.7rem;
+}
+.skin-minimal .blog-masonry .grid-item h2 {
+	font-size: 1.8rem;
+	margin-bottom: 0;
+}
+.skin-minimal .blog-masonry.masonry-set-dimensions h2 {
+	font-size: 1.4rem;
+	text-transform: uppercase;
+}
+.skin-minimal .blog-masonry.masonry-set-dimensions h2 a {
+	color: #fff;
+}
+/*------------------------------------------------------------------
+[2. Background Color & Color Classes]
+*/
+
+.skin-minimal .bkg-charcoal {
+	background-color: #333;
+	border-color: #333;
+}
+.skin-minimal .bkg-hover-charcoal:hover {
+	background-color: #000;
+	border-color: #000;
+}
+.skin-minimal .bkg-yellow-light {
+	background-color: #fdeb74;
+	border-color: #fdeb74;
+}
+.skin-minimal .bkg-hover-yellow-light:hover {
+	background-color: #f6e04d;
+	border-color: #f6e04d;
+}
+.skin-minimal .color-yellow-light {
+	color: #fdeb74;
+}
+.skin-minimal .color-yellow-light:hover {
+	color: #f6e04d;
+}
+/*------------------------------------------------------------------
+[3. Header & Navigation]
+*/
+
+.skin-minimal .header .logo {
+	width: 12rem;
+	padding-bottom: 0;
+}
+.skin-minimal .header.header-compact .logo {
+	padding-bottom: 0;
+}
+.skin-minimal .header-1 .header-inner {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.skin-minimal .header-1.header-background .header-inner {
+	border-bottom: 1px solid rgba(255, 255, 255, 0);
+}
+.skin-minimal .header-3,
+.skin-minimal .header-3 .header-inner {
+	background: #fff;
+}
+.skin-minimal .header .navigation > ul > li > a {
+	padding-bottom: 0.4rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 0.2rem;
+}
+.skin-minimal .header-1 .navigation > ul > li > a,
+.skin-minimal .header-1 .navigation-show a,
+.skin-minimal .header-4 .navigation > ul > li > a,
+.skin-minimal .header-4 .navigation-show a {
+	color: #fff;
+}
+.skin-minimal .nav-dark .navigation > ul > li > a,
+.skin-minimal .nav-dark .navigation-show a {
+	color: #333;
+}
+/* Side Navigation Colors */
+
+.skin-minimal .side-navigation-wrapper .logo {
+	width: 12rem;
+}
+.skin-minimal .side-navigation-wrapper {
+	background-size: cover;
+}
+.skin-minimal .side-navigation > ul > li > a {
+	padding: 0.6rem 4rem;
+	font-size: 1.5rem;
+	line-height: 1.2;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+}
+.skin-minimal .side-navigation .sub-menu a {
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+}
+.skin-minimal .side-navigation .sub-menu li:first-child {
+	padding-top: 0.5rem;
+}
+.skin-minimal .side-navigation .sub-menu li:last-child {
+	padding-bottom: 1rem;
+}
+.skin-minimal .side-navigation-footer {
+	color: #666;
+	font-size: 1.1rem;
+}
+/* Navigation - Active Colors */
+
+.skin-minimal .header .navigation > ul > li > a {
+	margin: 0 1.5rem;
+	padding-left: 0;
+	padding-right: 0;
+}
+.skin-minimal .side-navigation ul li.current > a {
+	color: #fff;
+}
+.skin-minimal .header .navigation > ul > li.current > a {
+	padding-bottom: 0.2rem;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+}
+.skin-minimal .nav-dark .navigation > ul > li.current > a {
+	color: #333;
+	border-bottom: 1px solid #333;
+}
+/* Navigation - Hover Colors */
+
+.skin-minimal .header a:hover.navigation-show a:hover,
+.skin-minimal .header .navigation > ul > li > a:hover,
+.skin-minimal .header .side-navigation > ul > li > a:hover {
+	color: #fff;
+	opacity: 0.6;
+}
+.skin-minimal .nav-dark .navigation-show a:hover,
+.skin-minimal .nav-dark .navigation > ul > li > a:hover {
+	color: #333;
+	opacity: 0.6;
+}
+/* Header Cackground on Scroll Color */
+
+.skin-minimal .header.header-type-top .header-inner,
+.skin-minimal .header.header-type-top-large .header-inner,
+.skin-minimal .header.header-background .header-inner {
+	background: #fff;
+}
+.skin-minimal .header-type-top .navigation-show a,
+.skin-minimal .header-type-top .navigation > ul > li > a,
+.skin-minimal .header-type-top .side-navigation > ul > li > a,
+.skin-minimal .header-type-top-large .navigation-show a,
+.skin-minimal .header-type-top-large .navigation > ul > li > a,
+.skin-minimal .header-type-top-large .side-navigation > ul > li > a,
+.skin-minimal .header-background .navigation-show a,
+.skin-minimal .header-background .navigation > ul > li > a,
+.skin-minimal .header-background .side-navigation > ul > li > a,
+.skin-minimal .header-3 .navigation-show a,
+.skin-minimal .header-3 .navigation > ul > li > a,
+.skin-minimal .header-3 .side-navigation > ul > li > a {
+	color: #666;
+}
+.skin-minimal .header-2.header-sticky .navigation > ul > li.current > a,
+.skin-minimal .header-background .navigation > ul > li.current > a,
+.skin-minimal .header-type-top .navigation > ul > li.current > a,
+.skin-minimal .header-type-top-large .navigation > ul > li.current > a,
+.skin-minimal .header-3.header-sticky .navigation > ul > li.current > a,
+.skin-minimal .header-3 .navigation > ul > li.current > a {
+	color: #000;
+	border-bottom: none;
+}
+.skin-minimal .header-type-top .navigation-show a:hover,
+.skin-minimal .header-type-top .navigation > ul > li > a:hover,
+.skin-minimal .header-type-top .side-navigation > ul > li > a:hover,
+.skin-minimal .nav-dark .header-type-top .navigation-show a:hover,
+.skin-minimal .nav-dark .header-type-top .navigation > ul > li > a:hover,
+.skin-minimal .header-type-top-large .navigation-show a:hover,
+.skin-minimal .header-type-top-large .navigation > ul > li > a:hover,
+.skin-minimal .header-type-top-large .side-navigation > ul > li > a:hover,
+.skin-minimal .nav-dark .header-type-top-large .navigation-show a:hover,
+.skin-minimal .nav-dark .header-type-top-large .navigation > ul > li > a:hover,
+.skin-minimal .header-background .navigation-show a:hover,
+.skin-minimal .header-background .navigation > ul > li > a:hover,
+.skin-minimal .header-background .side-navigation > ul > li > a:hover,
+.skin-minimal .nav-dark .header-background .navigation-show a:hover,
+.skin-minimal .nav-dark .header-background .navigation > ul > li > a:hover,
+.skin-minimal .header-3 .navigation-show a:hover,
+.skin-minimal .header-3 .navigation > ul > li > a:hover,
+.skin-minimal .header-3 .side-navigation > ul > li > a:hover {
+	color: #000;
+	opacity: 1;
+}
+.skin-minimal .header-type-top .navigation > ul > li.current > a:hover,
+.skin-minimal .header-type-top-large .navigation > ul > li.current > a:hover,
+.skin-minimal .header-background .navigation > ul > li.current > a:hover,
+.skin-minimal .header-3 .navigation > ul > li.current > a:hover {
+	color: #666;
+}
+.skin-minimal .side-navigation-footer .social-list a {
+	color: #999;
+}
+/* Header mobile & breakpoint colors */
+	
+@media only screen and (max-width: 960px) {
+	.skin-minimal .header,
+	.skin-minimal .header .header-inner {
+		background: #fff;
+	}
+	.skin-minimal .header-inner .navigation-show a {
+		color: #666;
+	}
+	.skin-minimal .header-inner .navigation-show a:hover {
+		color: #000;
+		opacity: 1;
+	}
+}
+/*------------------------------------------------------------------
+[4. Slider & Parallax]
+*/
+
+.skin-minimal .full-width-slider,
+.skin-minimal .parallax.fixed-height {
+	height: 100vh;
+}
+.skin-minimal .mobile .full-width-slider,
+.skin-minimal .mobile .parallax.fixed-height {
+	height: 50rem;
+}
+/* Slider Navigation */
+
+.skin-minimal .tms-arrow-nav {
+	background: none;
+	font-size: 2rem;
+	color: #fff;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.skin-minimal .tms-arrow-nav:hover {
+	border-color: rgba(255, 255, 255, 0.5);
+}
+.skin-minimal #tms-prev {
+	border-left: none;
+}
+.skin-minimal #tms-next {
+	border-right: none;
+}
+/*------------------------------------------------------------------
+[5. Lightbox]
+*/
+
+.skin-minimal .tm-lightbox {
+	background: rgba(255, 255, 255, 1);
+}
+.skin-minimal .tm-lightbox .tm-loader #circle {
+	border-color: #000;
+}
+.skin-minimal #tml-content {
+	box-shadow: none;
+}
+.skin-minimal #tml-caption span {
+	border: none;
+}
+.skin-minimal #tml-caption {
+	font-style: normal;
+	font-weight: 200;
+	letter-spacing: 0.1rem;
+	color: #333;
+}
+.skin-minimal .tml-nav {
+	color: #333;
+}
+/*------------------------------------------------------------------
+[6. Plugin Preloader]
+*/
+
+.skin-minimal .tm-loader #circle {
+	width: 2rem;
+	height: 2rem;
+	background: none;
+	border: 3px solid rgba(255, 255, 255, 0.5);
+}
+/*------------------------------------------------------------------
+[7. Rollovers]
+*/
+
+.skin-minimal .overlay-info {
+	background: rgba(253, 234, 109, 0.95);
+}
+.skin-minimal .overlay-info > span > span {
+	text-align: center;
+	vertical-align: center;
+	color: #333;
+}
+.skin-minimal .overlay-info .project-number {
+	font-size: 3rem;
+	color: #999;
+	font-weight: 200;
+}
+.skin-minimal .overlay-info .project-title {
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.skin-minimal .overlay-info .project-description {
+	font-size: 1.4rem;
+	font-weight: 200;
+}
+/*------------------------------------------------------------------
+[8. Homepage]
+*/
+
+.skin-minimal .portfolio-filter-menu a {
+	font-weight: bold;
+	color: #666;
+}
+.skin-minimal .portfolio-filter-menu a:hover {
+	color: #333;
+}
+.skin-minimal .portfolio-filter-menu a.active {
+	border-width: 1px;
+}
+.skin-minimal .home-page [class*="portfolio-"] {
+	background: none;
+}
+/*------------------------------------------------------------------
+[9. About Pages]
+*/
+/* Team Sections */
+
+.skin-minimal .team-3 {
+	background: none;
+	color: #666;
+}
+.skin-minimal .team-3 .team-content-info,
+.skin-minimal .team-3 .social-list a {
+	color: #666;
+}
+.skin-minimal .team-3 .team-content-info h5 {
+	color: #333;
+}
+.skin-minimal .team-3 .tms-bullet-nav {
+	background: #333;
+}
+.skin-minimal .team-3 .team-slider .tms-pagination {
+	text-align: left;
+}
+.skin-minimal .team-4 .social-list a {
+	color: #333;
+}
+.skin-minimal .team-3 h6.occupation,
+.skin-minimal .team-4 h6.occupation {
+	font-weight: 200;
+}
+.skin-minimal .team-slider-grid {
+	background-color: #fdeb74;
+}
+.skin-minimal .team-slider-grid .padded {
+	padding: 0.5rem 1rem;
+}
+/* Logo Sections */
+
+.skin-minimal .logos-2 {
+}
+.skin-minimal .logos-4 {
+	background-color: #f4f4f4;
+}
+.skin-minimal .logos-4 .grid-item:before {
+	border-left: 1px dashed #ccc;
+}
+.skin-minimal .logos-4 .grid-item:after {
+	border-bottom: 1px dashed #ccc;
+}
+/* Hero Section */
+
+/* Testimonial Section */
+
+.skin-minimal .testimonial-5 {
+	padding-top: 5rem;
+}
+.skin-minimal .testimonial-5 .tms-bullet-nav {
+	background: #333;
+}
+/* Stat Section */
+
+.skin-minimal .stats-2 {
+	padding-top: 12rem;
+	padding-bottom: 12rem;
+	background: #333;
+}
+.skin-minimal .stats-2 .counter {
+	font-size: 3rem;
+	color: #eee;
+}
+.skin-minimal .stats-2 .grid-item {
+	border-right-style: dashed;
+	border-color: #666;
+}
+.skin-minimal .stats-2 .description {
+	letter-spacing: 0.1rem;
+	color: #999;
+}
+@media only screen and (max-width: 768px) {
+	.stats-2 .row-1 {
+		border-bottom-style: dashed;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.skin-minimal .stats-2 .row-1,
+	.skin-minimal .stats-2 .grid-item {
+		border-right: none;
+	}
+	.skin-minimal .stats-2 .grid-item {
+		border-bottom-style: dashed;
+	}
+}
+/*------------------------------------------------------------------
+[10. Contact Pages]
+*/
+/* Hero Sections */
+
+.skin-minimal .hero-5-contact > .row:before {
+	background: #fdeb74;
+}
+.skin-minimal .hero-5-contact > .row:after,
+.skin-minimal .hero-7-contact > .row:before {
+}
+/* Form Response */
+
+.skin-minimal .contact-form-container .form-response {
+	color: #666;
+}
+/* Contact Style 3 Breakpoint Colors */
+
+@media only screen and (max-width: 768px) {
+	.skin-minimal .hero-5-contact {
+		color: #666;
+	}
+	..skin-minimal hero-5-contact h1,
+	.skin-minimal .hero-5-contact h2,
+	.skin-minimal .hero-5-contact h3,
+	.skin-minimal .hero-5-contact h4,
+	.skin-minimal .hero-5-contact h5,
+	.skin-minimal .hero-5-contact h6 {
+		color: #333;
+	}
+	.skin-minimal .hero-5-contact .hero-content-inner {
+		text-align: left;
+	}
+}
+/*------------------------------------------------------------------
+[11. Project Pages]
+*/
+/* Pagination */
+
+.skin-minimal .pagination-2 {
+	color: #666;
+	background-color: #f4f4f4;
+}
+.skin-minimal .pagination-2 a {
+	-webkit-transition-duration: 700ms;
+	-moz-transition-duration: 700ms;
+	-o-transition-duration: 700ms;
+	-ms-transition-duration: 700ms;
+	transition-duration: 700ms;
+}
+.skin-minimal .pagination-2 [style] a:hover {
+	background: rgba(0, 0, 0, 0.3);
+	color: #fdeb74;
+}
+/*------------------------------------------------------------------
+[12. Fullscreen Pages]
+*/
+
+.skin-minimal .fullscreen-section .fullscreen-inner {
+	background: rgba(0, 0, 0, 0.6);
+}
+.skin-minimal .error-404 .background-image,
+.skin-minimal .error-500 .background-image {
+}
+.skin-minimal .coming-soon-1 .background-image {
+	background-color: #000;
+}
+.skin-minimal .coming-soon-1 .logo {
+	width: 12rem;
+	margin-bottom: 1rem;
+}
+.skin-minimal .error-404 .search-form-container {
+	max-width: 50rem;
+}
+.skin-minimal .error-404 .search-form-container .button {
+	width: auto;
+}
+.skin-minimal .error-404 .form-search {
+	font-size: 1.7rem;
+	font-weight: 200;
+	text-align: center;
+}
+/*------------------------------------------------------------------
+[13. Blog Pages]
+*/
+
+.skin-minimal .post-content.with-background {
+	background: #f4f4f4;
+}
+.skin-minimal .post-info {
+	color: #999;
+}
+.skin-minimal .blog-masonry.masonry-set-dimensions .post-info,
+.skin-minimal .blog-masonry.masonry-set-dimensions .post-info a {
+	color: #fff;
+}
+.skin-minimal .post-info span {
+	font-weight: 200;
+}
+.skin-minimal .post-media .mejs-container.mejs-audio .mejs-controls .mejs-play,
+.skin-minimal .post-media .mejs-container.mejs-audio .mejs-controls .mejs-pause {
+	border-radius: 0;
+}
+.skin-minimal .post-media .mejs-container.mejs-audio .mejs-controls {
+	border-radius: 0;
+}
+.skin-minimal .pagination-2 .page-list a {
+	color: #999;
+}
+.skin-minimal .pagination-2 .page-list a:hover,
+.skin-minimal .pagination-2 .page-list .current {
+	color: #333;
+}
+.skin-minimal .masonry-set-dimensions .post-content.with-background {
+	background: rgba(0, 0, 0, 0.3);
+}
+.skin-minimal .masonry-set-dimensions .post-media:hover .post-content {
+	background: rgba(0, 0, 0, 0.8);
+}
+.skin-minimal .masonry-set-dimensions .post-media:hover .post-content h2 a {
+	color: #fdeb74;
+}
+.skin-minimal .masonry-set-dimensions .post-media:hover .post-author a:hover {
+	opacity: 0.5;
+}
+.skin-minimal .single-post .post-info span,
+.skin-minimal .single-post-tags a {
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0.5rem;
+}
+.skin-minimal .single-post-tags .tags-title {
+	font-size: 1.3rem;
+}
+.skin-minimal h3.widget-title {
+	font-size: 1.6rem;
+}
+.skin-minimal aside .widget li {
+	padding-top: 0.6rem;
+	padding-bottom: 0.6rem;
+}
+/*------------------------------------------------------------------
+[14. Resolution Media Queries]
+*/
+/*------------------------------------------------------------------
+[15. Form Elements]
+*/
+
+.skin-minimal .form-element[class*="border-"] {
+	background: none;
+}
+.skin-minimal input.form-element,
+.skin-minimal textarea.form-element {
+	padding-left: 0;
+	padding-right: 0;
+	background: none;
+	color: #666;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px dashed #666;
+	border-radius: 0;
+}
+.skin-minimal .form-element:focus,
+.skin-minimal textarea:focus {
+	background: none;
+	color: #333;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #222;
+	box-shadow: none;
+}
+.skin-minimal .form-element.required-field,
+.skin-minimal textarea.required-field {
+	border-color: #fdeb74;
+	border-bottom-style: solid;
+}
+.skin-minimal .hero-5-contact .form-element.required-field,
+.skin-minimal .hero-5-contact textarea.required-field {
+	border-bottom: 1px solid #222;
+}
+.skin-minimal .form-element.required-field:focus,
+.skin-minimal textarea.required-field:focus {
+	border-bottom: 1px solid #222;
+}
+.skin-minimal .fullscreen-section .form-element,
+.skin-minimal .fullscreen-section textarea {
+	padding-left: 0;
+	padding-right: 0;
+	background: none;
+	color: #fff;
+	border-bottom: 1px dashed #fff;
+	border-radius: 0;
+}
+.skin-minimal .fullscreen-section .form-element:focus,
+.skin-minimal .fullscreen-section textarea:focus {
+	background: none;
+	color: #fff;
+	border-bottom: 1px solid #fff;
+	box-shadow: none;
+}
+.skin-minimal .fullscreen-section .form-element.required-field,
+.skin-minimal .fullscreen-section textarea.required-field {
+	border-color: #fdeb74;
+}
+.skin-minimal .fullscreen-section .form-element.required-field:focus,
+.skin-minimal .fullscreen-section textarea.required-field:focus {
+	border-bottom: 1px solid #fff;
+}
+.skin-minimal .contact-form-container .form-response,
+.skin-minimal .signup-form-container .form-response {
+	position: absolute;
+	bottom: -2rem;
+}
+/*------------------------------------------------------------------
+[16. Social Lists]
+*/
+
+.skin-minimal .social-list li {
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.skin-minimal .social-list,
+.skin-minimal .social-list li a {
+	color: #999;
+}
+.skin-minimal .social-list li a {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+.skin-minimal .social-list li.social-list-label {
+	color: #333;
+}
+.skin-minimal .social-list li a:hover {
+	color: #333;
+}
+.skin-minimal .side-navigation-footer .social-list a,
+.skin-minimal .footer-1 .social-list a,
+.skin-minimal .fullscreen-section footer .social-list a {
+	margin-left: 0.8rem;
+	margin-right: 0.8rem;
+	font-size: 1.1rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+}
+.skin-minimal .social-list li:first-child a {
+	margin-left: 0;
+}
+.skin-minimal .side-navigation-footer .social,
+.skin-minimal .side-navigation-footer .social-list a {
+	color: #666;
+	font-size: 1.3rem;
+}
+.skin-minimal .fullscreen-section .social-list,
+.skin-minimal .fullscreen-section .social-list a {
+	color: #fff;
+}
+.skin-minimal .fullscreen-section .social-list a {
+	opacity: 0.6;
+}
+.skin-minimal .fullscreen-section .social-list a:hover {
+	color: #fff;
+	opacity: 1;
+}
+.skin-minimal .footer-1 .social-list,
+.skin-minimal .footer-1 .social-list a {
+	color: #666;
+}
+/*------------------------------------------------------------------
+[17. Footer]
+*/
+
+.skin-minimal .footer {
+	background: #fff;
+	color: #777;
+}
+.skin-minimal .footer a {
+	color: #999;
+}
+.skin-minimal .footer a:hover,
+.skin-minimal .footer .social-list a:hover {
+	color: #000;
+}
+.skin-minimal .footer .footer-logo {
+	width: 5rem;
+}
+.skin-minimal .footer .footer-bottom .copyright,
+.skin-minimal .footer .footer-bottom .social-list {
+	float: none;
+}
+.skin-minimal .footer h3 {
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #999;
+}
+.skin-minimal .footer address {
+	font-size: 1.3rem;
+	line-height: 1.2;
+	font-style: normal;
+	font-weight: 200;
+}
+.skin-minimal .footer-1 .footer-bottom-inner {
+	border-color: #f4f4f4;
+}
+/* Helpers */
+
+@media only screen and (max-width: 768px) {
+	.fullscreen-section .background-on-mobile {
+		background: #f4f4f4;
+	}
+	.fullscreen-section .background-on-mobile * {
+		color: #666 !important;
+	}
+}
+/*------------------------------------------------------------------
+[18. Dividers]
+*/
+
+.skin-minimal hr,
+.skin-minimal .divider {
+	border-color: #f4f4f4;
+}
+.skin-minimal .separator {
+	background-color: #333;
+}
+/*------------------------------------------------------------------
+[19. Media Element Player]
+*/
+
+.skin-minimal .mejs-container.mejs-audio .mejs-controls {
+	border-radius: 3px;
+}
+.skin-minimal .mejs-container.mejs-audio .mejs-controls,
+.skin-minimal .mejs-controls .mejs-volume-button .mejs-volume-slider {
+	background: rgba(255, 255, 255, 0.9);
+}
+.skin-minimal .mejs-container.mejs-audio .mejs-controls {
+	background: #f9f9f9;
+}
+.skin-minimal .mejs-minimal-player .mejs-container .mejs-controls {
+	background: none;
+}
+/* Time track, vol track */
+
+.skin-minimal .mejs-controls .mejs-time-rail .mejs-time-loaded,
+.skin-minimal .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-total,
+.skin-minimal .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-total {
+	background: #999;
+}
+/* Time track, vol level track */
+
+.skin-minimal .mejs-controls .mejs-time-rail .mejs-time-current,
+.skin-minimal .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+.skin-minimal .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
+	background: #666;
+}
+.skin-minimal .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-handle {
+	background: #fff;
+}
+.skin-minimal .mejs-minimal-player .mejs-controls .mejs-time-rail .mejs-time-total {
+	background: #fff;
+}
+.skin-minimal .mejs-minimal-player .mejs-controls .mejs-time-rail .mejs-time-current,
+.skin-minimal .mejs-minimal-player .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current,
+.skin-minimal .mejs-minimal-player .mejs-controls .mejs-volume-button .mejs-volume-slider .mejs-volume-current {
+	background: #fff;
+}
+/* Tooltip */
+
+.skin-minimal .mejs-controls .mejs-time-rail .mejs-time-float {
+	background: #000;
+}
+/* Play Button */
+
+.skin-minimal .mejs-container.mejs-audio .mejs-controls .mejs-play,
+.skin-minimal .mejs-container.mejs-audio .mejs-controls .mejs-pause {
+	background: #eee;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+}
+.skin-minimal .mejs-minimal-player .mejs-container .mejs-controls .mejs-play,
+.skin-minimal .mejs-minimal-player .mejs-container .mejs-controls .mejs-pause {
+	background: none;
+}
+/* Time */
+
+.skin-minimal .mejs-container .mejs-controls .mejs-time span {
+	color: #666;
+}
+.skin-minimal .mejs-minimal-player .mejs-container .mejs-controls .mejs-time span {
+	color: #fff;
+}
+/*------------------------------------------------------------------
+[20. Demo Misc]
+*/
+
+.skin-minimal a.action-buy {
+	background-color: #000;
+	border-color: #000;
+	color: #fff;
+}
+.skin-minimal a.action-buy:hover {
+	background-color: #fdea6e;
+	border-color: #fdea6e;
+	color: #232323;
+}
