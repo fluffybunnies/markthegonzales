@@ -68,7 +68,7 @@ Set up google analytics and webmaster tools
 --- Deploying New Server ---
 
 # back up sql
-/usr/local/bin/node /root/sire/_common/s3dl/bin/baksql.js -d markthegonzales -b sire-markthegonzales/sql > /var/log/markthegonzales_baksql.log
+/usr/local/bin/node /root/sire/_common/s3dl/bin/baksql.js -d markthegonzales -b sire-markthegonzales/sql
 # back up uploads
 node /root/sire/_common/s3dl/bin/shuv.js -d /var/www/markthegonzales/web/wp-content/uploads -b sire-markthegonzales/wp-content/uploads
 # clean up old server
@@ -87,6 +87,8 @@ ssh ubuntu@123.123.123.123 'sudo /root/sire/index.sh hope'
 --- Post theme install ---
 
 Note: These are all part of the repo. Only need to follow these rules if moving to a new theme.
+	Probly best to do all this in a second commit after pushing theme
+
 
 Add to top of index.php
 	include dirname(__FILE__).'/bootshell.php';
@@ -106,6 +108,15 @@ Symlink for style.css needs to be created
     cd [path to theme]
     mv style.css style.css.bak
     ln -s ../../uploads/x/style.css style.css
+
+
+On server, back up previous theme styles
+	cp ./web/wp-content/uploads/style.css ./web/wp-content/uploads/style.gonzo.css
+	# make sure it got pushed to s3. it should be uploaded automatically
+
+
+On server, dump new theme's style.css into uploads/x/style.css. Review prev style.css to see if there's anything that was added by gonzo (shouldn't be)
+	scp ./web/wp-content/themes/nietzsche/style.css.bak root@52.1.131.33:/var/www/markthegonzales/web/wp-content/uploads/x/style.css
 
 
 Point theme's style.css to s3 synced copy.
