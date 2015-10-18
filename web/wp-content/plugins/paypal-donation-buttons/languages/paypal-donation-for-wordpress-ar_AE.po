@@ -1,0 +1,465 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PayPal Donation Buttons v1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-02-12 20:14:30+0000\n"
+"Last-Translator: admin <phpwebcreators@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: Arabic\n"
+"X-Poedit-Country: U.A.E.\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:31
+#@ paypal-donation-for-wordpress
+msgid "PayPal Account Setup"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:34
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:37
+#@ paypal-donation-for-wordpress
+msgid "Enable PayPal sandbox"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:40
+#, php-format
+#@ paypal-donation-for-wordpress
+msgid "PayPal sandbox can be used to test payments. Sign up for a developer account <a href=\"%s\">here</a>."
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:46
+#@ paypal-donation-for-wordpress
+msgid "PayPal Email address to receive payments"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:49
+#@ paypal-donation-for-wordpress
+msgid "This is the Paypal Email address where the payments will go."
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:58
+#@ paypal-donation-for-wordpress
+msgid "Currency"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:59
+#@ paypal-donation-for-wordpress
+msgid "This is the currency for your visitors to make Payments or Donations in."
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:70
+#@ paypal-donation-for-wordpress
+msgid "Optional Settings"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:73
+#@ paypal-donation-for-wordpress
+msgid "Button Label"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:76
+#@ paypal-donation-for-wordpress
+msgid "PayPal donation button label  (Optional)."
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:83
+#@ paypal-donation-for-wordpress
+msgid "Return Page"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:85
+#@ paypal-donation-for-wordpress
+msgid "URL to which the donator comes to after completing the donation; for example, a URL on your site that displays a \"Thank you for your donation\"."
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:93
+#@ paypal-donation-for-wordpress
+msgid "Instant Payment Notification – notify_url"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:95
+#@ paypal-donation-for-wordpress
+msgid "Take a look at the  <a target=\"_blank\" href=\"https://developer.paypal.com/webapps/developer/docs/classic/ipn/integration-guide/IPNSetup/\">PayPal IPN Configuration Guide</a> for details on setting up IPN with this URL."
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:103
+#@ paypal-donation-for-wordpress
+msgid "Amount"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:106
+#@ paypal-donation-for-wordpress
+msgid "The default amount for a donation (Optional)."
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:111
+#@ paypal-donation-for-wordpress
+msgid "Purpose"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:114
+#@ paypal-donation-for-wordpress
+msgid "The default purpose of a donation (Optional)."
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:121
+#@ paypal-donation-for-wordpress
+msgid "Reference"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:124
+#@ paypal-donation-for-wordpress
+msgid "Default reference for the donation (Optional)."
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:132
+#@ paypal-donation-for-wordpress
+msgid "Donation Button"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:135
+#@ paypal-donation-for-wordpress
+msgid "Select Donation Button"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:139
+#@ paypal-donation-for-wordpress
+msgid "Select Button."
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:141
+#@ paypal-donation-for-wordpress
+msgid "<img style=\"vertical-align: middle;\" alt=\"small\" src=\"https://www.paypal.com/en_US/i/btn/btn_donate_SM.gif\">"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:142
+#@ paypal-donation-for-wordpress
+msgid "<img style=\"vertical-align: middle;\" alt=\"large\" src=\"https://www.paypal.com/en_US/i/btn/btn_donate_LG.gif\">"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:143
+#@ paypal-donation-for-wordpress
+msgid "<img style=\"vertical-align: middle;\" alt=\"cards\" src=\"https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif\">"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:144
+#@ paypal-donation-for-wordpress
+msgid "<img style=\"vertical-align: middle;\" alt=\"cards\" src=\"https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_74x21.png\">"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:145
+#@ paypal-donation-for-wordpress
+msgid "<img style=\"vertical-align: middle;\" alt=\"cards\" src=\"https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_92x26.png\">"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:146
+#@ paypal-donation-for-wordpress
+msgid "<img style=\"vertical-align: middle;\" alt=\"cards\" src=\"https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_cc_147x47.png\">"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:147
+#@ paypal-donation-for-wordpress
+msgid "<img style=\"vertical-align: middle;\" alt=\"cards\" src=\"https://www.paypalobjects.com/webstatic/en_US/btn/btn_donate_pp_142x27.png\">"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:148
+#@ paypal-donation-for-wordpress
+msgid "<img style=\"vertical-align: middle;\" alt=\"cards\" src=\"https://www.paypalobjects.com/en_AU/i/btn/x-click-but11.gif\">"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:149
+#@ paypal-donation-for-wordpress
+msgid "<img style=\"vertical-align: middle;\" alt=\"cards\" src=\"https://www.paypalobjects.com/en_AU/i/btn/x-click-but21.gif\">"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:150
+#@ paypal-donation-for-wordpress
+msgid "Custom Button ( If you select this option then pleae enter url in Custom Button textbox, Otherwise donation button will not display. )"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:155
+#@ paypal-donation-for-wordpress
+msgid "Custom Button"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:158
+#@ paypal-donation-for-wordpress
+msgid "Enter a URL to a custom donation button."
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:216
+#@ Option
+msgid "Save changes"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:229
+#@ paypal-donation-for-wordpress
+msgid "United Arab Emirates Dirham"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:230
+#@ paypal-donation-for-wordpress
+msgid "Australian Dollars"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:231
+#@ paypal-donation-for-wordpress
+msgid "Bangladeshi Taka"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:232
+#@ paypal-donation-for-wordpress
+msgid "Brazilian Real"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:233
+#@ paypal-donation-for-wordpress
+msgid "Bulgarian Lev"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:234
+#@ paypal-donation-for-wordpress
+msgid "Canadian Dollars"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:235
+#@ paypal-donation-for-wordpress
+msgid "Chilean Peso"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:236
+#@ paypal-donation-for-wordpress
+msgid "Chinese Yuan"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:237
+#@ paypal-donation-for-wordpress
+msgid "Colombian Peso"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:238
+#@ paypal-donation-for-wordpress
+msgid "Czech Koruna"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:239
+#@ paypal-donation-for-wordpress
+msgid "Danish Krone"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:240
+#@ paypal-donation-for-wordpress
+msgid "Dominican Peso"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:241
+#@ paypal-donation-for-wordpress
+msgid "Euros"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:242
+#@ paypal-donation-for-wordpress
+msgid "Hong Kong Dollar"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:243
+#@ paypal-donation-for-wordpress
+msgid "Croatia kuna"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:244
+#@ paypal-donation-for-wordpress
+msgid "Hungarian Forint"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:245
+#@ paypal-donation-for-wordpress
+msgid "Icelandic krona"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:246
+#@ paypal-donation-for-wordpress
+msgid "Indonesia Rupiah"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:247
+#@ paypal-donation-for-wordpress
+msgid "Indian Rupee"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:248
+#@ paypal-donation-for-wordpress
+msgid "Nepali Rupee"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:249
+#@ paypal-donation-for-wordpress
+msgid "Israeli Shekel"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:250
+#@ paypal-donation-for-wordpress
+msgid "Japanese Yen"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:251
+#@ paypal-donation-for-wordpress
+msgid "Lao Kip"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:252
+#@ paypal-donation-for-wordpress
+msgid "South Korean Won"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:253
+#@ paypal-donation-for-wordpress
+msgid "Malaysian Ringgits"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:254
+#@ paypal-donation-for-wordpress
+msgid "Mexican Peso"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:255
+#@ paypal-donation-for-wordpress
+msgid "Nigerian Naira"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:256
+#@ paypal-donation-for-wordpress
+msgid "Norwegian Krone"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:257
+#@ paypal-donation-for-wordpress
+msgid "New Zealand Dollar"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:258
+#@ paypal-donation-for-wordpress
+msgid "Paraguayan Guaraní"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:259
+#@ paypal-donation-for-wordpress
+msgid "Philippine Pesos"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:260
+#@ paypal-donation-for-wordpress
+msgid "Polish Zloty"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:261
+#@ paypal-donation-for-wordpress
+msgid "Pounds Sterling"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:262
+#@ paypal-donation-for-wordpress
+msgid "Romanian Leu"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:263
+#@ paypal-donation-for-wordpress
+msgid "Russian Ruble"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:264
+#@ paypal-donation-for-wordpress
+msgid "Singapore Dollar"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:265
+#@ paypal-donation-for-wordpress
+msgid "South African rand"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:266
+#@ paypal-donation-for-wordpress
+msgid "Swedish Krona"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:267
+#@ paypal-donation-for-wordpress
+msgid "Swiss Franc"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:268
+#@ paypal-donation-for-wordpress
+msgid "Taiwan New Dollars"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:269
+#@ paypal-donation-for-wordpress
+msgid "Thai Baht"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:270
+#@ paypal-donation-for-wordpress
+msgid "Turkish Lira"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:271
+#@ paypal-donation-for-wordpress
+msgid "US Dollars"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:272
+#@ paypal-donation-for-wordpress
+msgid "Vietnamese Dong"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-general-setting.php:273
+#@ paypal-donation-for-wordpress
+msgid "Egyptian Pound"
+msgstr ""
+
+#: admin/partials/paypal-donation-for-wordpress-html-output.php:326
+#@ Option
+msgid "Select a page&hellip;"
+msgstr ""
+
+#. translators: plugin header field 'Name'
+#: paypal-donation-for-wordpress.php:0
+#@ paypal-donation-for-wordpress
+msgid "PayPal Donation Buttons"
+msgstr ""
+
+#. translators: plugin header field 'PluginURI'
+#. translators: plugin header field 'AuthorURI'
+#: paypal-donation-for-wordpress.php:0
+#@ paypal-donation-for-wordpress
+msgid "http://www.mbjtechnolabs.com"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: paypal-donation-for-wordpress.php:0
+#@ paypal-donation-for-wordpress
+msgid "Easy to use add a PayPal Donation button as a Page, Post and Widget with a shortcode"
+msgstr ""
+
+#. translators: plugin header field 'Author'
+#: paypal-donation-for-wordpress.php:0
+#@ paypal-donation-for-wordpress
+msgid "johnny manziel"
+msgstr ""
+
+#. translators: plugin header field 'Version'
+#: paypal-donation-for-wordpress.php:0
+#@ paypal-donation-for-wordpress
+msgid "1.0.1"
+msgstr ""
+
