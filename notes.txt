@@ -127,6 +127,9 @@ In [theme]/functions.php (sometimes we need to change header.php):
     NEW [GOOD]: <link rel="stylesheet" type="text/css" href="<?php \ace\Ace::vres('/wp-content/uploads/x/style.css'); ?>" />
 
 
+If can't find the link to style.css, remove the symlink and note to gonzo that he shouldn't mess with stylez cuz they will get lost
+
+
 May need to upgrade jquery version
 		\ace\Ace::vres('/assets/jquery.1.8.min.js')
 

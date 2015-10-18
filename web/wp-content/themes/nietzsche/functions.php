@@ -1,5 +1,7 @@
 <?php
 
+require_once TEMPLATEPATH.'/../../../ace/misc/wordpress.php';
+
 define("PE_THEME_NAME",'Nietzsche');
 
 // bootstrap the framework

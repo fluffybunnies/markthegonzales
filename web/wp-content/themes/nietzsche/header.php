@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html class="page-<?php echo preg_replace('/[^a-z0-9_\-]/','',strtolower(get_query_var('pagename'))); ?>">
 <?php $t =& peTheme();?>
 <?php $content =& $t->content; ?>
 <?php $meta = $t->content->meta(); ?>
